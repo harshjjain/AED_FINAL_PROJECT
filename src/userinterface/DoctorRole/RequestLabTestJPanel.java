@@ -41,8 +41,8 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
     }
     
     public void populatefields(){
-        txtchildName.setText(request.getChildName());
-        txtSex.setText(request.getSex());
+        txtName.setText(request.getChildName());
+        txtGender.setText(request.getSex());
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -53,79 +53,91 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        requestTestJButton = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
-        txtchildName = new javax.swing.JTextField();
-        txtSex = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtTests = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
+        btnRequestTest = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        txtName = new javax.swing.JTextField();
+        txtGender = new javax.swing.JTextField();
+        lblName = new javax.swing.JLabel();
+        lblGender = new javax.swing.JLabel();
+        spTest = new javax.swing.JScrollPane();
+        txtTestsDone = new javax.swing.JTextArea();
+        lblTestDone = new javax.swing.JLabel();
+        lblimg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(177, 201, 226));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(0, 102, 204));
+        setLayout(null);
 
-        requestTestJButton.setBackground(new java.awt.Color(255, 255, 255));
-        requestTestJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        requestTestJButton.setText("Request Test");
-        requestTestJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnRequestTest.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnRequestTest.setText("Request Test");
+        btnRequestTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                requestTestJButtonActionPerformed(evt);
+                btnRequestTestActionPerformed(evt);
             }
         });
-        add(requestTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 170, 50));
+        add(btnRequestTest);
+        btnRequestTest.setBounds(580, 420, 170, 50);
 
-        backJButton.setBackground(new java.awt.Color(255, 255, 255));
-        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        backJButton.setText("<<Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnBack.setText("<<<");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, 40));
+        add(btnBack);
+        btnBack.setBounds(50, 40, 72, 40);
 
-        txtchildName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        add(txtchildName, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 290, 30));
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        add(txtName);
+        txtName.setBounds(190, 150, 220, 30);
 
-        txtSex.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtSex.addActionListener(new java.awt.event.ActionListener() {
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSexActionPerformed(evt);
+                txtGenderActionPerformed(evt);
             }
         });
-        add(txtSex, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 290, 30));
+        add(txtGender);
+        txtGender.setBounds(540, 150, 140, 30);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel2.setText("Child Name:");
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 120, 30));
+        lblName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(255, 255, 255));
+        lblName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblName.setText("Child Name:");
+        lblName.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(lblName);
+        lblName.setBounds(60, 150, 120, 30);
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel3.setText("Sex:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 180, 30));
+        lblGender.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblGender.setForeground(new java.awt.Color(255, 255, 255));
+        lblGender.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblGender.setText("Gender:");
+        add(lblGender);
+        lblGender.setBounds(450, 150, 80, 30);
 
-        txtTests.setColumns(20);
-        txtTests.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtTests.setRows(5);
-        jScrollPane1.setViewportView(txtTests);
+        txtTestsDone.setColumns(20);
+        txtTestsDone.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtTestsDone.setRows(5);
+        spTest.setViewportView(txtTestsDone);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 290, 90));
+        add(spTest);
+        spTest.setBounds(230, 240, 290, 90);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel1.setText("  Tests to be Done:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 120, 20));
+        lblTestDone.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblTestDone.setForeground(new java.awt.Color(255, 255, 255));
+        lblTestDone.setText("  Tests to be Done:");
+        add(lblTestDone);
+        lblTestDone.setBounds(70, 270, 160, 20);
+        add(lblimg);
+        lblimg.setBounds(20, 20, 0, 0);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
-        if(txtTests.getText()==null || txtTests.getText().isEmpty()){
+    private void btnRequestTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestTestActionPerformed
+        if(txtTestsDone.getText()==null || txtTestsDone.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Please enter the Tests to be done");
         }
         else{
-        request.setTests(txtTests.getText());
+        request.setTests(txtTestsDone.getText());
         request.setDoctor(userAccount);
         request.setMedicalStatus("Ongoing");
         Organization org = null;
@@ -141,9 +153,9 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Request successfully sent");
         }
         }
-    }//GEN-LAST:event_requestTestJButtonActionPerformed
+    }//GEN-LAST:event_btnRequestTestActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -153,21 +165,22 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
         
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void txtSexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSexActionPerformed
+    private void txtGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGenderActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtSexActionPerformed
+    }//GEN-LAST:event_txtGenderActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton requestTestJButton;
-    private javax.swing.JTextField txtSex;
-    private javax.swing.JTextArea txtTests;
-    private javax.swing.JTextField txtchildName;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnRequestTest;
+    private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblTestDone;
+    private javax.swing.JLabel lblimg;
+    private javax.swing.JScrollPane spTest;
+    private javax.swing.JTextField txtGender;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextArea txtTestsDone;
     // End of variables declaration//GEN-END:variables
 }

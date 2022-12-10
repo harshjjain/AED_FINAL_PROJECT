@@ -69,18 +69,18 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
 
         txtBankBalance = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblFirstName = new javax.swing.JLabel();
         txtFirstName = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        lblLastName = new javax.swing.JLabel();
         txtLastName = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        lblDonationAmount = new javax.swing.JLabel();
         txtDonationAmount = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        lblPeronalMessage = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtPersonalMessage = new javax.swing.JTextArea();
         jLabel6 = new javax.swing.JLabel();
         txtHighestDonor = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnConfirm = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbldonation = new javax.swing.JTable();
 
@@ -93,33 +93,33 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Bank Account Balance:");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setText("First Name:");
+        lblFirstName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblFirstName.setText("First Name:");
 
         txtFirstName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Last Name:");
+        lblLastName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblLastName.setText("Last Name:");
 
         txtLastName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel4.setText("Donation Amount:");
+        lblDonationAmount.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblDonationAmount.setText("Donation Amount:");
 
         txtDonationAmount.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setText("Personal Message:");
+        lblPeronalMessage.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblPeronalMessage.setText("Personal Message:");
 
         txtPersonalMessage.setColumns(20);
         txtPersonalMessage.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtPersonalMessage.setRows(5);
         jScrollPane1.setViewportView(txtPersonalMessage);
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel6.setText("Highest Donor:");
 
         txtHighestDonor.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -129,12 +129,11 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("Confirm Donation");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnConfirm.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnConfirm.setText("Confirm");
+        btnConfirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnConfirmActionPerformed(evt);
             }
         });
 
@@ -157,7 +156,7 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
                 .addGap(89, 89, 89)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
@@ -170,17 +169,17 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
+                    .addComponent(lblFirstName)
+                    .addComponent(lblLastName)
+                    .addComponent(lblDonationAmount)
+                    .addComponent(lblPeronalMessage))
                 .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1)
                     .addComponent(txtDonationAmount)
                     .addComponent(txtFirstName)
                     .addComponent(txtLastName))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52))
         );
@@ -192,27 +191,27 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
+                            .addComponent(lblFirstName)
                             .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
+                            .addComponent(lblLastName)
                             .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
+                            .addComponent(lblDonationAmount)
                             .addComponent(txtDonationAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(31, 31, 31)
-                                .addComponent(jLabel5)))))
+                                .addComponent(lblPeronalMessage)))))
                 .addGap(62, 62, 62)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtBankBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtHighestDonor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -229,7 +228,7 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtHighestDonorActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmActionPerformed
         // TODO add your handling code here:
         try{
             if(txtFirstName.getText()==null||txtFirstName.getText().isEmpty()||txtLastName.getText()==null||txtLastName.getText().isEmpty()){
@@ -267,19 +266,19 @@ Organization org = null;
         }}catch(Exception e){
             JOptionPane.showMessageDialog(null, "Please check your Inputs");
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnConfirmActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnConfirm;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblDonationAmount;
+    private javax.swing.JLabel lblFirstName;
+    private javax.swing.JLabel lblLastName;
+    private javax.swing.JLabel lblPeronalMessage;
     private javax.swing.JTable tbldonation;
     private javax.swing.JTextField txtBankBalance;
     private javax.swing.JTextField txtDonationAmount;

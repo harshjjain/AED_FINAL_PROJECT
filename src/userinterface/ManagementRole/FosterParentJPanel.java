@@ -40,11 +40,11 @@ public class FosterParentJPanel extends javax.swing.JPanel {
     }
     
     public void populateFields(){
-        txtChildName.setText(request.getChildName());
-        txtSex.setText(request.getSex());
-        txtEthnicity.setText(request.getEthnicity());
+        txtChildName.setText(request.getChildName());//Child Name is fetched
+        txtChildGender.setText(request.getSex());//Child Gender is fetched
+        txtEthnicity.setText(request.getEthnicity());// Child Ethinicity is fetched
         ImageIcon imageIcon = new ImageIcon(request.getImagePath());
-        lblImage.setIcon(imageIcon);
+        lblImage.setIcon(imageIcon);// Child Image is fetched
     }
 
     /**
@@ -62,35 +62,35 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         txtFirstName = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        lblFirstName = new javax.swing.JLabel();
         txtLastName = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        lblLastName = new javax.swing.JLabel();
         txtAge = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtOccupation = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        lblAge = new javax.swing.JLabel();
+        txtProfession = new javax.swing.JTextField();
+        lblProfession = new javax.swing.JLabel();
+        lblGender = new javax.swing.JLabel();
         txtSSN = new javax.swing.JPasswordField();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        lblSSN = new javax.swing.JLabel();
+        lblAnnualIncome = new javax.swing.JLabel();
         txtAnnualIncome = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        lblLiabilities = new javax.swing.JLabel();
         txtLiabilities = new javax.swing.JTextField();
         txtPartner = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        lblPartner = new javax.swing.JLabel();
+        lblSavings = new javax.swing.JLabel();
         txtSavings = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnSave = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         txtChildName = new javax.swing.JTextField();
-        txtSex = new javax.swing.JTextField();
+        txtChildGender = new javax.swing.JTextField();
         txtEthnicity = new javax.swing.JTextField();
         lblImage = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        txtsex = new javax.swing.JTextField();
+        lblHeader = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        txtGender = new javax.swing.JTextField();
 
         jLabel4.setText("Age");
 
@@ -101,166 +101,173 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(177, 201, 226));
         setLayout(null);
 
-        txtFirstName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtFirstName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtFirstName);
-        txtFirstName.setBounds(699, 205, 250, 23);
+        txtFirstName.setBounds(699, 205, 250, 27);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel1.setText("First Name:");
-        add(jLabel1);
-        jLabel1.setBounds(581, 210, 73, 17);
+        lblFirstName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblFirstName.setText("First Name:");
+        add(lblFirstName);
+        lblFirstName.setBounds(554, 210, 100, 21);
 
-        txtLastName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtLastName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtLastName);
-        txtLastName.setBounds(700, 250, 250, 23);
+        txtLastName.setBounds(700, 250, 250, 27);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setText("Last Name:");
-        add(jLabel2);
-        jLabel2.setBounds(584, 255, 71, 17);
+        lblLastName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblLastName.setText("Last Name:");
+        add(lblLastName);
+        lblLastName.setBounds(563, 255, 110, 21);
 
-        txtAge.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtAge.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtAge);
-        txtAge.setBounds(700, 290, 60, 23);
+        txtAge.setBounds(700, 290, 60, 27);
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Age:");
-        add(jLabel3);
-        jLabel3.setBounds(620, 290, 190, 30);
+        lblAge.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblAge.setText("Age:");
+        add(lblAge);
+        lblAge.setBounds(610, 290, 40, 30);
 
-        txtOccupation.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        add(txtOccupation);
-        txtOccupation.setBounds(700, 370, 250, 23);
+        txtProfession.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        add(txtProfession);
+        txtProfession.setBounds(700, 370, 250, 27);
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setText("Occupation:");
-        add(jLabel5);
-        jLabel5.setBounds(580, 370, 74, 30);
+        lblProfession.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblProfession.setText("Profession:");
+        add(lblProfession);
+        lblProfession.setBounds(564, 370, 90, 30);
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel7.setText("Sex:");
-        add(jLabel7);
-        jLabel7.setBounds(626, 330, 30, 20);
+        lblGender.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblGender.setText("Gender:");
+        add(lblGender);
+        lblGender.setBounds(586, 330, 70, 20);
 
-        txtSSN.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtSSN.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtSSN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSSNActionPerformed(evt);
             }
         });
         add(txtSSN);
-        txtSSN.setBounds(700, 410, 250, 23);
+        txtSSN.setBounds(700, 410, 250, 27);
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel8.setText("Social Security Number:");
-        add(jLabel8);
-        jLabel8.setBounds(510, 407, 149, 30);
+        lblSSN.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblSSN.setText("Social Security Number:");
+        add(lblSSN);
+        lblSSN.setBounds(459, 407, 200, 30);
 
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel9.setText("Annual Income ($):");
-        add(jLabel9);
-        jLabel9.setBounds(540, 450, 121, 30);
+        lblAnnualIncome.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblAnnualIncome.setText("Annual Income ($):");
+        add(lblAnnualIncome);
+        lblAnnualIncome.setBounds(501, 450, 190, 30);
 
-        txtAnnualIncome.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtAnnualIncome.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        txtAnnualIncome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAnnualIncomeActionPerformed(evt);
+            }
+        });
         add(txtAnnualIncome);
-        txtAnnualIncome.setBounds(700, 450, 250, 23);
+        txtAnnualIncome.setBounds(700, 450, 250, 27);
 
-        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel10.setText("Liabilities if Any ($):");
-        add(jLabel10);
-        jLabel10.setBounds(530, 490, 130, 30);
+        lblLiabilities.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblLiabilities.setText("Liabilities if Any ($):");
+        add(lblLiabilities);
+        lblLiabilities.setBounds(490, 490, 170, 30);
 
-        txtLiabilities.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtLiabilities.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtLiabilities);
-        txtLiabilities.setBounds(700, 490, 250, 23);
+        txtLiabilities.setBounds(700, 490, 250, 27);
 
-        txtPartner.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtPartner.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtPartner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPartnerActionPerformed(evt);
             }
         });
         add(txtPartner);
-        txtPartner.setBounds(700, 530, 250, 23);
+        txtPartner.setBounds(700, 530, 250, 27);
 
-        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel11.setText("Spouse / Partner's full Name:");
-        add(jLabel11);
-        jLabel11.setBounds(480, 530, 181, 30);
+        lblPartner.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblPartner.setText("Spouse / Partner's full Name:");
+        add(lblPartner);
+        lblPartner.setBounds(416, 530, 260, 30);
 
-        jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel12.setText("Savings / FD's /Shares if Any ($):");
-        add(jLabel12);
-        jLabel12.setBounds(460, 580, 205, 30);
+        lblSavings.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblSavings.setText("Savings / FD's /Shares if Any ($):");
+        add(lblSavings);
+        lblSavings.setBounds(394, 580, 270, 30);
 
-        txtSavings.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtSavings.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtSavings);
-        txtSavings.setBounds(700, 580, 250, 23);
+        txtSavings.setBounds(700, 580, 250, 27);
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("Submit");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnSave.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnSaveActionPerformed(evt);
             }
         });
-        add(jButton1);
-        jButton1.setBounds(590, 640, 176, 40);
+        add(btnSave);
+        btnSave.setBounds(590, 640, 176, 40);
 
-        jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel13.setText("Child Name:");
         add(jLabel13);
-        jLabel13.setBounds(79, 225, 77, 17);
+        jLabel13.setBounds(46, 225, 110, 21);
 
-        jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel14.setText("Sex:");
+        jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel14.setText("Child Gender:");
         add(jLabel14);
-        jLabel14.setBounds(131, 270, 27, 17);
+        jLabel14.setBounds(38, 270, 120, 21);
 
-        jLabel16.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel16.setText("Ethnicity:");
         add(jLabel16);
-        jLabel16.setBounds(96, 315, 60, 17);
+        jLabel16.setBounds(81, 315, 90, 21);
 
-        txtChildName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtChildName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtChildName);
-        txtChildName.setBounds(193, 220, 200, 23);
+        txtChildName.setBounds(193, 220, 200, 27);
 
-        txtSex.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        add(txtSex);
-        txtSex.setBounds(193, 265, 98, 23);
+        txtChildGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        add(txtChildGender);
+        txtChildGender.setBounds(193, 265, 98, 27);
 
-        txtEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtEthnicity);
-        txtEthnicity.setBounds(193, 310, 200, 23);
+        txtEthnicity.setBounds(193, 310, 200, 27);
 
         lblImage.setText(".");
         add(lblImage);
         lblImage.setBounds(40, 380, 380, 330);
 
-        jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel17.setText("Enter Foster Parent details");
-        add(jLabel17);
-        jLabel17.setBounds(420, 90, 280, 29);
+        lblHeader.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblHeader.setText("Enter Guardian details");
+        add(lblHeader);
+        lblHeader.setBounds(420, 90, 237, 29);
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setText("<<Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnBack.setText("<<<");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(jButton2);
-        jButton2.setBounds(28, 27, 77, 37);
-        add(txtsex);
-        txtsex.setBounds(700, 330, 64, 22);
+        add(btnBack);
+        btnBack.setBounds(28, 27, 72, 37);
+
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        add(txtGender);
+        txtGender.setBounds(700, 330, 64, 27);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtPartnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPartnerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPartnerActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         String ssnval = "^\\d{10}";
         Pattern pat3 = Pattern.compile(ssnval);
@@ -268,7 +275,7 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         if(!mat3.matches()){
         JOptionPane.showMessageDialog(null, "Invalid SSN");
         }
-        else if(txtFirstName.getText()==null||txtFirstName.getText().isEmpty()||txtLastName.getText()==null||txtLastName.getText().isEmpty()||txtAge.getText()==null||txtAge.getText().isEmpty()||txtSex.getText()==null||txtSex.getText().isEmpty()||txtOccupation.getText()==null||txtOccupation.getText().isEmpty()||txtSSN.getText()==null||txtSSN.getText().isEmpty()||txtAnnualIncome.getText()==null||txtAnnualIncome.getText().isEmpty())
+        else if(txtFirstName.getText()==null||txtFirstName.getText().isEmpty()||txtLastName.getText()==null||txtLastName.getText().isEmpty()||txtAge.getText()==null||txtAge.getText().isEmpty()||txtChildGender.getText()==null||txtChildGender.getText().isEmpty()||txtProfession.getText()==null||txtProfession.getText().isEmpty()||txtSSN.getText()==null||txtSSN.getText().isEmpty()||txtAnnualIncome.getText()==null||txtAnnualIncome.getText().isEmpty())
         {
                         JOptionPane.showMessageDialog(null, "One or more mandatory text fields might be empty");
 
@@ -277,8 +284,8 @@ public class FosterParentJPanel extends javax.swing.JPanel {
             try{
         request.setParent(txtFirstName.getText()+" "+txtLastName.getText());
         request.setAge(Integer.parseInt(txtAge.getText()));
-        request.setParentsex((String)(txtsex.getText()));
-        request.setOccupation(txtOccupation.getText());
+        request.setParentsex((String)(txtGender.getText()));
+        request.setOccupation(txtProfession.getText());
         request.setSSN(Double.parseDouble(txtSSN.getText()));
         request.setAnnualIncome(Double.parseDouble(txtAnnualIncome.getText()));
         request.setLiabilies(Double.parseDouble(txtLiabilities.getText()));
@@ -299,9 +306,9 @@ public class FosterParentJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please enter the data correcctly");
         }
             }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -310,48 +317,52 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         dwajp.populateTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
     private void txtSSNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSSNActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSSNActionPerformed
 
+    private void txtAnnualIncomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnnualIncomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAnnualIncomeActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnSave;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JLabel lblAge;
+    private javax.swing.JLabel lblAnnualIncome;
+    private javax.swing.JLabel lblFirstName;
+    private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblImage;
+    private javax.swing.JLabel lblLastName;
+    private javax.swing.JLabel lblLiabilities;
+    private javax.swing.JLabel lblPartner;
+    private javax.swing.JLabel lblProfession;
+    private javax.swing.JLabel lblSSN;
+    private javax.swing.JLabel lblSavings;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtAnnualIncome;
+    private javax.swing.JTextField txtChildGender;
     private javax.swing.JTextField txtChildName;
     private javax.swing.JTextField txtEthnicity;
     private javax.swing.JTextField txtFirstName;
+    private javax.swing.JTextField txtGender;
     private javax.swing.JTextField txtLastName;
     private javax.swing.JTextField txtLiabilities;
-    private javax.swing.JTextField txtOccupation;
     private javax.swing.JTextField txtPartner;
+    private javax.swing.JTextField txtProfession;
     private javax.swing.JPasswordField txtSSN;
     private javax.swing.JTextField txtSavings;
-    private javax.swing.JTextField txtSex;
-    private javax.swing.JTextField txtsex;
     // End of variables declaration//GEN-END:variables
 }

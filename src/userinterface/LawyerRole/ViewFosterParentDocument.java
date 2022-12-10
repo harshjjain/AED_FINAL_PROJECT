@@ -91,22 +91,22 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
         btnDisapproval = new javax.swing.JToggleButton();
         jButton2 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(177, 201, 226));
+        setBackground(new java.awt.Color(0, 102, 204));
         setLayout(null);
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel11.setText("Spouse / Partner's full Name:");
         add(jLabel11);
-        jLabel11.setBounds(600, 387, 179, 30);
+        jLabel11.setBounds(600, 387, 181, 30);
 
         txtLastName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtLastName);
-        txtLastName.setBounds(840, 110, 250, 27);
+        txtLastName.setBounds(840, 110, 250, 23);
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel12.setText("Savings / FD's /Shares if Any ($):");
         add(jLabel12);
-        jLabel12.setBounds(580, 427, 202, 30);
+        jLabel12.setBounds(580, 427, 205, 30);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText(" Name:");
@@ -115,11 +115,11 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
 
         txtSavings.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtSavings);
-        txtSavings.setBounds(840, 430, 250, 27);
+        txtSavings.setBounds(840, 430, 250, 23);
 
         txtAge.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtAge);
-        txtAge.setBounds(840, 150, 80, 27);
+        txtAge.setBounds(840, 150, 80, 23);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("Age:");
@@ -128,36 +128,36 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
 
         txtOccupation.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtOccupation);
-        txtOccupation.setBounds(840, 230, 250, 27);
+        txtOccupation.setBounds(840, 230, 250, 23);
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setText("Occupation:");
         add(jLabel5);
-        jLabel5.setBounds(700, 227, 75, 30);
+        jLabel5.setBounds(700, 227, 74, 30);
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel13.setText("Child Name:");
         add(jLabel13);
-        jLabel13.setBounds(72, 203, 78, 17);
+        jLabel13.setBounds(72, 203, 77, 17);
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel14.setText("Sex:");
         add(jLabel14);
-        jLabel14.setBounds(124, 248, 26, 17);
+        jLabel14.setBounds(124, 248, 27, 17);
 
         jLabel16.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel16.setText("Ethnicity:");
         add(jLabel16);
-        jLabel16.setBounds(89, 293, 61, 17);
+        jLabel16.setBounds(89, 293, 60, 17);
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel7.setText("Sex:");
         add(jLabel7);
-        jLabel7.setBounds(750, 190, 26, 30);
+        jLabel7.setBounds(750, 190, 27, 30);
 
         txtSSN.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtSSN);
-        txtSSN.setBounds(840, 270, 250, 27);
+        txtSSN.setBounds(840, 270, 250, 23);
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel8.setText("Social Security Number:");
@@ -167,32 +167,32 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel9.setText("Annual Income ($):");
         add(jLabel9);
-        jLabel9.setBounds(660, 310, 119, 20);
+        jLabel9.setBounds(660, 310, 121, 20);
 
         txtChildName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtChildName);
-        txtChildName.setBounds(177, 198, 200, 27);
+        txtChildName.setBounds(177, 198, 200, 23);
 
         txtAnnualIncome.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtAnnualIncome);
-        txtAnnualIncome.setBounds(840, 310, 250, 27);
+        txtAnnualIncome.setBounds(840, 310, 250, 23);
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel10.setText("Liabilities if Any ($):");
         add(jLabel10);
-        jLabel10.setBounds(650, 350, 128, 30);
+        jLabel10.setBounds(650, 350, 129, 30);
 
         txtSex.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtSex);
-        txtSex.setBounds(177, 243, 200, 27);
+        txtSex.setBounds(177, 243, 200, 23);
 
         txtLiabilities.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtLiabilities);
-        txtLiabilities.setBounds(840, 350, 250, 27);
+        txtLiabilities.setBounds(840, 350, 250, 23);
 
         txtEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtEthnicity);
-        txtEthnicity.setBounds(177, 288, 200, 27);
+        txtEthnicity.setBounds(177, 288, 200, 23);
 
         txtPartner.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtPartner.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +201,7 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
             }
         });
         add(txtPartner);
-        txtPartner.setBounds(840, 390, 250, 27);
+        txtPartner.setBounds(840, 390, 250, 23);
 
         lblImage.setText(".");
         add(lblImage);
@@ -209,9 +209,8 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
 
         txtParentSex.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtParentSex);
-        txtParentSex.setBounds(840, 190, 80, 27);
+        txtParentSex.setBounds(840, 190, 80, 23);
 
-        btnApproval.setBackground(new java.awt.Color(255, 255, 255));
         btnApproval.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnApproval.setText("Approve");
         btnApproval.addActionListener(new java.awt.event.ActionListener() {
@@ -222,7 +221,6 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
         add(btnApproval);
         btnApproval.setBounds(630, 510, 126, 50);
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton1.setText("Submit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -233,7 +231,6 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
         add(jButton1);
         jButton1.setBounds(760, 590, 124, 50);
 
-        btnDisapproval.setBackground(new java.awt.Color(255, 255, 255));
         btnDisapproval.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnDisapproval.setText("Disapprove");
         btnDisapproval.addActionListener(new java.awt.event.ActionListener() {
@@ -244,7 +241,6 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
         add(btnDisapproval);
         btnDisapproval.setBounds(880, 510, 125, 50);
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton2.setText("<<Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -253,7 +249,7 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
             }
         });
         add(jButton2);
-        jButton2.setBounds(38, 22, 90, 38);
+        jButton2.setBounds(38, 22, 77, 38);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtPartnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPartnerActionPerformed

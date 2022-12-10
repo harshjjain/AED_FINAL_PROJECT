@@ -84,7 +84,9 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         tbldonation = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(177, 201, 226));
+        setBackground(new java.awt.Color(0, 102, 204));
+        setPreferredSize(new java.awt.Dimension(1000, 600));
+        setLayout(null);
 
         txtBankBalance.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtBankBalance.addActionListener(new java.awt.event.ActionListener() {
@@ -92,35 +94,58 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
                 txtBankBalanceActionPerformed(evt);
             }
         });
+        add(txtBankBalance);
+        txtBankBalance.setBounds(732, 395, 200, 23);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Bank Account Balance:");
+        add(jLabel1);
+        jLabel1.setBounds(506, 395, 200, 21);
 
         lblFirstName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblFirstName.setText("First Name:");
+        add(lblFirstName);
+        lblFirstName.setBounds(78, 100, 100, 21);
 
         txtFirstName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        add(txtFirstName);
+        txtFirstName.setBounds(240, 100, 234, 23);
 
         lblLastName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblLastName.setText("Last Name:");
+        add(lblLastName);
+        lblLastName.setBounds(79, 141, 100, 21);
 
         txtLastName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        add(txtLastName);
+        txtLastName.setBounds(240, 141, 234, 23);
 
         lblDonationAmount.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblDonationAmount.setText("Donation Amount:");
+        add(lblDonationAmount);
+        lblDonationAmount.setBounds(21, 182, 160, 21);
 
         txtDonationAmount.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        add(txtDonationAmount);
+        txtDonationAmount.setBounds(240, 182, 234, 23);
 
         lblPeronalMessage.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblPeronalMessage.setText("Personal Message:");
+        add(lblPeronalMessage);
+        lblPeronalMessage.setBounds(16, 262, 160, 21);
 
         txtPersonalMessage.setColumns(20);
         txtPersonalMessage.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtPersonalMessage.setRows(5);
         jScrollPane1.setViewportView(txtPersonalMessage);
 
+        add(jScrollPane1);
+        jScrollPane1.setBounds(240, 231, 234, 91);
+
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel6.setText("Highest Donor:");
+        add(jLabel6);
+        jLabel6.setBounds(570, 446, 140, 21);
 
         txtHighestDonor.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtHighestDonor.addActionListener(new java.awt.event.ActionListener() {
@@ -128,6 +153,8 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
                 txtHighestDonorActionPerformed(evt);
             }
         });
+        add(txtHighestDonor);
+        txtHighestDonor.setBounds(732, 446, 200, 23);
 
         btnConfirm.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnConfirm.setText("Confirm");
@@ -136,6 +163,8 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
                 btnConfirmActionPerformed(evt);
             }
         });
+        add(btnConfirm);
+        btnConfirm.setBounds(89, 384, 176, 44);
 
         tbldonation.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         tbldonation.setModel(new javax.swing.table.DefaultTableModel(
@@ -148,76 +177,8 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(tbldonation);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtBankBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtHighestDonor, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(81, 81, 81))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblFirstName)
-                    .addComponent(lblLastName)
-                    .addComponent(lblDonationAmount)
-                    .addComponent(lblPeronalMessage))
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
-                    .addComponent(txtDonationAmount)
-                    .addComponent(txtFirstName)
-                    .addComponent(txtLastName))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblFirstName)
-                            .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblLastName)
-                            .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblDonationAmount)
-                            .addComponent(txtDonationAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addComponent(lblPeronalMessage)))))
-                .addGap(62, 62, 62)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtBankBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(btnConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtHighestDonor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addContainerGap(115, Short.MAX_VALUE))
-        );
+        add(jScrollPane2);
+        jScrollPane2.setBounds(538, 93, 423, 229);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtBankBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBankBalanceActionPerformed

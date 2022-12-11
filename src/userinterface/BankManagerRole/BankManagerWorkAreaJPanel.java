@@ -67,9 +67,12 @@ public class BankManagerWorkAreaJPanel extends javax.swing.JPanel {
         btnClick = new javax.swing.JButton();
         lblApproval = new javax.swing.JLabel();
         btnView = new javax.swing.JButton();
+        lblBG = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 102, 204));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
 
+        tblBank.setBackground(new java.awt.Color(249, 241, 234));
         tblBank.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         tblBank.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -81,22 +84,35 @@ public class BankManagerWorkAreaJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblBank);
 
+        add(jScrollPane1);
+        jScrollPane1.setBounds(228, 64, 452, 271);
+
         lblPayment.setBackground(new java.awt.Color(255, 255, 255));
         lblPayment.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblPayment.setForeground(new java.awt.Color(255, 255, 255));
         lblPayment.setText("Payment Recieved Status:");
+        add(lblPayment);
+        lblPayment.setBounds(218, 389, 210, 21);
 
+        btnClick.setBackground(new java.awt.Color(249, 241, 234));
         btnClick.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        btnClick.setText("Click here");
+        btnClick.setText("Click ");
         btnClick.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClickActionPerformed(evt);
             }
         });
+        add(btnClick);
+        btnClick.setBounds(477, 386, 139, 28);
 
         lblApproval.setBackground(new java.awt.Color(255, 255, 255));
         lblApproval.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblApproval.setForeground(new java.awt.Color(255, 255, 255));
         lblApproval.setText("Approval:");
+        add(lblApproval);
+        lblApproval.setBounds(346, 441, 90, 21);
 
+        btnView.setBackground(new java.awt.Color(249, 241, 234));
         btnView.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {
@@ -104,40 +120,14 @@ public class BankManagerWorkAreaJPanel extends javax.swing.JPanel {
                 btnViewActionPerformed(evt);
             }
         });
+        add(btnView);
+        btnView.setBounds(477, 438, 139, 28);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(228, 228, 228)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblApproval)
-                            .addComponent(lblPayment))
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnClick, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(363, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPayment)
-                    .addComponent(btnClick))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblApproval)
-                    .addComponent(btnView))
-                .addContainerGap(291, Short.MAX_VALUE))
-        );
+        lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/bank-1.jpg"))); // NOI18N
+        lblBG.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        lblBG.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(lblBG);
+        lblBG.setBounds(0, 0, 1500, 1000);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClickActionPerformed
@@ -184,6 +174,7 @@ public class BankManagerWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnView;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblApproval;
+    private javax.swing.JLabel lblBG;
     private javax.swing.JLabel lblPayment;
     private javax.swing.JTable tblBank;
     // End of variables declaration//GEN-END:variables

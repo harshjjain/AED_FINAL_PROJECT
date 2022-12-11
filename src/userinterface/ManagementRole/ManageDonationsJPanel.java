@@ -16,6 +16,9 @@ import Business.WorkQueue.LabTestWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -45,6 +48,10 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         txtBankBalance.setText(WorkRequest.getBankbalance()+"");
         txtHighestDonor.setText(WorkRequest.getHighestdonor());
         populateFields();
+        Icon i = lblBG.getIcon();
+        ImageIcon icon = (ImageIcon)i;
+        Image image = icon.getImage().getScaledInstance(lblBG.getWidth() , lblBG.getHeight(), Image.SCALE_SMOOTH);
+        lblBG.setIcon(new ImageIcon(image));
     }
 
     public void populateFields(){
@@ -83,11 +90,14 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         btnConfirm = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbldonation = new javax.swing.JTable();
+        lblBG = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 102, 204));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
+        setMaximumSize(new java.awt.Dimension(2000, 1333));
+        setPreferredSize(new java.awt.Dimension(2000, 1333));
         setLayout(null);
 
+        txtBankBalance.setBackground(new java.awt.Color(221, 221, 221));
         txtBankBalance.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtBankBalance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,42 +108,51 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         txtBankBalance.setBounds(732, 395, 200, 23);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Bank Account Balance:");
         add(jLabel1);
         jLabel1.setBounds(506, 395, 200, 21);
 
         lblFirstName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblFirstName.setForeground(new java.awt.Color(255, 255, 255));
         lblFirstName.setText("First Name:");
         add(lblFirstName);
         lblFirstName.setBounds(78, 100, 100, 21);
 
+        txtFirstName.setBackground(new java.awt.Color(221, 221, 221));
         txtFirstName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtFirstName);
         txtFirstName.setBounds(240, 100, 234, 23);
 
         lblLastName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblLastName.setForeground(new java.awt.Color(255, 255, 255));
         lblLastName.setText("Last Name:");
         add(lblLastName);
         lblLastName.setBounds(79, 141, 100, 21);
 
+        txtLastName.setBackground(new java.awt.Color(221, 221, 221));
         txtLastName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtLastName);
         txtLastName.setBounds(240, 141, 234, 23);
 
         lblDonationAmount.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblDonationAmount.setForeground(new java.awt.Color(255, 255, 255));
         lblDonationAmount.setText("Donation Amount:");
         add(lblDonationAmount);
         lblDonationAmount.setBounds(21, 182, 160, 21);
 
+        txtDonationAmount.setBackground(new java.awt.Color(221, 221, 221));
         txtDonationAmount.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtDonationAmount);
         txtDonationAmount.setBounds(240, 182, 234, 23);
 
         lblPeronalMessage.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblPeronalMessage.setForeground(new java.awt.Color(255, 255, 255));
         lblPeronalMessage.setText("Personal Message:");
         add(lblPeronalMessage);
         lblPeronalMessage.setBounds(16, 262, 160, 21);
 
+        txtPersonalMessage.setBackground(new java.awt.Color(221, 221, 221));
         txtPersonalMessage.setColumns(20);
         txtPersonalMessage.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtPersonalMessage.setRows(5);
@@ -143,10 +162,12 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         jScrollPane1.setBounds(240, 231, 234, 91);
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Highest Donor:");
         add(jLabel6);
         jLabel6.setBounds(570, 446, 140, 21);
 
+        txtHighestDonor.setBackground(new java.awt.Color(221, 221, 221));
         txtHighestDonor.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtHighestDonor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,6 +177,7 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         add(txtHighestDonor);
         txtHighestDonor.setBounds(732, 446, 200, 23);
 
+        btnConfirm.setBackground(new java.awt.Color(221, 221, 221));
         btnConfirm.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnConfirm.setText("Confirm");
         btnConfirm.addActionListener(new java.awt.event.ActionListener() {
@@ -166,6 +188,7 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         add(btnConfirm);
         btnConfirm.setBounds(89, 384, 176, 44);
 
+        tbldonation.setBackground(new java.awt.Color(221, 221, 221));
         tbldonation.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         tbldonation.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -179,6 +202,14 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
 
         add(jScrollPane2);
         jScrollPane2.setBounds(538, 93, 423, 229);
+
+        lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/donation-1.jpg"))); // NOI18N
+        lblBG.setMaximumSize(new java.awt.Dimension(2000, 1333));
+        lblBG.setMinimumSize(new java.awt.Dimension(2000, 1333));
+        lblBG.setPreferredSize(new java.awt.Dimension(2000, 1333));
+        lblBG.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(lblBG);
+        lblBG.setBounds(0, 0, 2000, 1333);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtBankBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBankBalanceActionPerformed
@@ -236,6 +267,7 @@ Organization org = null;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblBG;
     private javax.swing.JLabel lblDonationAmount;
     private javax.swing.JLabel lblFirstName;
     private javax.swing.JLabel lblLastName;

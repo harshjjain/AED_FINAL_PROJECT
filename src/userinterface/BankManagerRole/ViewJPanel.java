@@ -53,52 +53,66 @@ UserAccount userAccount;
         jLabel4 = new javax.swing.JLabel();
         txtDonationAmount = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         jPasswordField1.setText("jPasswordField1");
 
-        setBackground(new java.awt.Color(177, 201, 226));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Personal Message:");
         add(jLabel5);
-        jLabel5.setBounds(120, 280, 114, 17);
+        jLabel5.setBounds(74, 280, 160, 21);
 
+        txtPersonalMessage.setBackground(new java.awt.Color(249, 241, 234));
         txtPersonalMessage.setColumns(20);
-        txtPersonalMessage.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtPersonalMessage.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtPersonalMessage.setRows(5);
         jScrollPane1.setViewportView(txtPersonalMessage);
 
         add(jScrollPane1);
         jScrollPane1.setBounds(329, 218, 240, 153);
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Name:");
         add(jLabel3);
-        jLabel3.setBounds(186, 133, 40, 17);
+        jLabel3.setBounds(168, 133, 70, 21);
 
-        txtLastName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtLastName.setBackground(new java.awt.Color(249, 241, 234));
+        txtLastName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtLastName);
-        txtLastName.setBounds(329, 128, 240, 23);
+        txtLastName.setBounds(329, 128, 240, 27);
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Donation Amount:");
         add(jLabel4);
-        jLabel4.setBounds(111, 178, 115, 17);
+        jLabel4.setBounds(80, 180, 170, 21);
 
-        txtDonationAmount.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDonationAmount.setBackground(new java.awt.Color(249, 241, 234));
+        txtDonationAmount.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtDonationAmount);
-        txtDonationAmount.setBounds(329, 173, 240, 23);
+        txtDonationAmount.setBounds(329, 173, 240, 27);
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("<<Back");
+        jButton1.setBackground(new java.awt.Color(249, 241, 234));
+        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jButton1.setText("<<<");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         add(jButton1);
-        jButton1.setBounds(53, 35, 77, 37);
+        jButton1.setBounds(53, 35, 72, 37);
+
+        jLabel1.setBackground(new java.awt.Color(249, 241, 234));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/donation.png"))); // NOI18N
+        add(jLabel1);
+        jLabel1.setBounds(0, 0, 1600, 1069);
 
         getAccessibleContext().setAccessibleName("");
     }// </editor-fold>//GEN-END:initComponents
@@ -117,6 +131,7 @@ UserAccount userAccount;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

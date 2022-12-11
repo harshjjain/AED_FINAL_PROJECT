@@ -9,6 +9,8 @@ import Business.UserAccount.UserAccount;
 import Business.WorkQueue.LabTestWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.awt.Image;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -32,7 +34,13 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
         this.userProcessContainer=userProcessContainer;
         this.request=request;
         this.userAccount=userAccount;
-        populatefields();    }
+        populatefields();
+        Icon i = lblBG.getIcon();
+        ImageIcon icon = (ImageIcon)i;
+        Image image = icon.getImage().getScaledInstance(lblBG.getWidth() , lblBG.getHeight(), Image.SCALE_SMOOTH);
+        lblBG.setIcon(new ImageIcon(image));
+
+    }
     
         public void populatefields(){
         txtChildName.setText(request.getChildName());
@@ -90,110 +98,139 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
         btnSubmit = new javax.swing.JButton();
         btnDisapproval = new javax.swing.JToggleButton();
         jButton2 = new javax.swing.JButton();
+        lblBG = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 102, 204));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setForeground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(2000, 1333));
         setLayout(null);
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Spouse / Partner's full Name:");
         add(jLabel11);
         jLabel11.setBounds(536, 387, 290, 30);
 
+        txtName.setBackground(new java.awt.Color(249, 241, 234));
         txtName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtName);
         txtName.setBounds(840, 110, 250, 27);
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Savings / FD's /Shares if Any ($):");
         add(jLabel12);
         jLabel12.setBounds(514, 427, 320, 30);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText(" Name:");
         add(jLabel2);
         jLabel2.setBounds(710, 110, 70, 30);
 
+        txtSavings.setBackground(new java.awt.Color(249, 241, 234));
         txtSavings.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtSavings);
         txtSavings.setBounds(840, 430, 250, 27);
 
+        txtAge.setBackground(new java.awt.Color(249, 241, 234));
         txtAge.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtAge);
         txtAge.setBounds(840, 150, 80, 27);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Age:");
         add(jLabel3);
         jLabel3.setBounds(728, 150, 50, 30);
 
+        txtProfession.setBackground(new java.awt.Color(249, 241, 234));
         txtProfession.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtProfession);
         txtProfession.setBounds(840, 230, 250, 27);
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Profession:");
         add(jLabel5);
         jLabel5.setBounds(676, 227, 110, 30);
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Child Name:");
         add(jLabel13);
         jLabel13.setBounds(40, 200, 120, 21);
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Child Gender:");
         add(jLabel14);
         jLabel14.setBounds(31, 248, 120, 21);
 
         jLabel16.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Ethnicity:");
         add(jLabel16);
         jLabel16.setBounds(70, 290, 90, 21);
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Gender:");
         add(jLabel7);
         jLabel7.setBounds(697, 190, 80, 30);
 
+        txtSSN.setBackground(new java.awt.Color(249, 241, 234));
         txtSSN.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtSSN);
         txtSSN.setBounds(840, 270, 250, 27);
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Social Security Number:");
         add(jLabel8);
         jLabel8.setBounds(570, 270, 220, 30);
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Annual Income ($):");
         add(jLabel9);
         jLabel9.setBounds(611, 310, 200, 20);
 
+        txtChildName.setEditable(false);
+        txtChildName.setBackground(new java.awt.Color(249, 241, 234));
         txtChildName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtChildName);
         txtChildName.setBounds(177, 198, 200, 27);
 
+        txtAnnualIncome.setBackground(new java.awt.Color(249, 241, 234));
         txtAnnualIncome.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtAnnualIncome);
         txtAnnualIncome.setBounds(840, 310, 250, 27);
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Liabilities if Any ($):");
         add(jLabel10);
         jLabel10.setBounds(611, 350, 200, 30);
 
+        txtChildGender.setEditable(false);
+        txtChildGender.setBackground(new java.awt.Color(249, 241, 234));
         txtChildGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtChildGender);
         txtChildGender.setBounds(177, 243, 200, 27);
 
+        txtLiabilities.setBackground(new java.awt.Color(249, 241, 234));
         txtLiabilities.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtLiabilities);
         txtLiabilities.setBounds(840, 350, 250, 27);
 
+        txtEthnicity.setEditable(false);
+        txtEthnicity.setBackground(new java.awt.Color(249, 241, 234));
         txtEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtEthnicity);
         txtEthnicity.setBounds(177, 288, 200, 27);
 
+        txtPartner.setBackground(new java.awt.Color(249, 241, 234));
         txtPartner.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtPartner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,10 +244,12 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
         add(lblImage);
         lblImage.setBounds(50, 380, 390, 320);
 
+        txtGender.setBackground(new java.awt.Color(249, 241, 234));
         txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtGender);
         txtGender.setBounds(840, 190, 80, 27);
 
+        btnApproval.setBackground(new java.awt.Color(249, 241, 234));
         btnApproval.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnApproval.setText("Approve");
         btnApproval.addActionListener(new java.awt.event.ActionListener() {
@@ -221,6 +260,7 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
         add(btnApproval);
         btnApproval.setBounds(630, 510, 126, 50);
 
+        btnSubmit.setBackground(new java.awt.Color(249, 241, 234));
         btnSubmit.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -231,6 +271,7 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
         add(btnSubmit);
         btnSubmit.setBounds(760, 590, 124, 50);
 
+        btnDisapproval.setBackground(new java.awt.Color(249, 241, 234));
         btnDisapproval.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnDisapproval.setText("Disapprove");
         btnDisapproval.addActionListener(new java.awt.event.ActionListener() {
@@ -241,15 +282,21 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
         add(btnDisapproval);
         btnDisapproval.setBounds(880, 510, 125, 50);
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setText("<<Back");
+        jButton2.setBackground(new java.awt.Color(249, 241, 234));
+        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jButton2.setText("<<<");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         add(jButton2);
-        jButton2.setBounds(38, 22, 77, 38);
+        jButton2.setBounds(80, 20, 77, 38);
+
+        lblBG.setForeground(new java.awt.Color(204, 204, 204));
+        lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/parent.jpg"))); // NOI18N
+        add(lblBG);
+        lblBG.setBounds(0, 0, 2000, 1333);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtPartnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPartnerActionPerformed
@@ -325,6 +372,7 @@ public class ViewFosterParentDocument extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lblBG;
     private javax.swing.JLabel lblImage;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtAnnualIncome;

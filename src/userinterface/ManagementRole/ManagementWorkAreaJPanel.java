@@ -14,6 +14,9 @@ import Business.UserAccount.UserAccount;
 import Business.WorkQueue.LabTestWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import userinterface.DoctorRole.ViewPatientDetailsJPanel;
@@ -41,6 +44,10 @@ public class ManagementWorkAreaJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.system = system;
         populateTable();
+        Icon i = lblBG.getIcon();
+        ImageIcon icon = (ImageIcon)i;
+        Image image = icon.getImage().getScaledInstance(lblBG.getWidth() , lblBG.getHeight(), Image.SCALE_SMOOTH);
+        lblBG.setIcon(new ImageIcon(image));
     }
 
      public void populateTable(){
@@ -72,10 +79,12 @@ public class ManagementWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         requestTable = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lblHeader = new javax.swing.JLabel();
         btnManageDonations = new javax.swing.JButton();
+        lblBG = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 102, 204));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
 
         requestTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         requestTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -88,16 +97,23 @@ public class ManagementWorkAreaJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(requestTable);
 
+        add(jScrollPane1);
+        jScrollPane1.setBounds(279, 102, 618, 321);
+
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton2.setText("Click here");
+        jButton2.setText("Click ");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        add(jButton2);
+        jButton2.setBounds(453, 509, 76, 35);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("To Submit Foster Parent Form for the Selected Child");
+        lblHeader.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblHeader.setText("To Submit Foster Parent Form for the Selected Child");
+        add(lblHeader);
+        lblHeader.setBounds(305, 456, 450, 35);
 
         btnManageDonations.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnManageDonations.setText("Manage Donations");
@@ -106,41 +122,12 @@ public class ManagementWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageDonationsActionPerformed(evt);
             }
         });
+        add(btnManageDonations);
+        btnManageDonations.setBounds(407, 574, 193, 47);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(300, 300, 300))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(453, 453, 453)
-                        .addComponent(jButton2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(192, 192, 192)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 618, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(407, 407, 407)
-                        .addComponent(btnManageDonations, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(222, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(btnManageDonations, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(61, Short.MAX_VALUE))
-        );
+        lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/management.jpg"))); // NOI18N
+        add(lblBG);
+        lblBG.setBounds(0, 0, 1800, 1201);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -172,8 +159,9 @@ public class ManagementWorkAreaJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnManageDonations;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblBG;
+    private javax.swing.JLabel lblHeader;
     private javax.swing.JTable requestTable;
     // End of variables declaration//GEN-END:variables
 }

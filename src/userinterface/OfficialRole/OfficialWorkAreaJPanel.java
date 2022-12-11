@@ -46,13 +46,13 @@ public class OfficialWorkAreaJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.userAccount = account;
         //valueLabel1.setText(enterprise.getName());
-        lblusername.setText(userAccount.getUsername());
+        lblUserName.setText(userAccount.getUsername());
         this.system = system;
         populateRequestTable();
     }
     
     public void populateRequestTable(){
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblworkRequest.getModel();
         
         model.setRowCount(0);
         for (WorkRequest request : userAccount.getWorkQueue().getWorkRequestList()){
@@ -80,31 +80,34 @@ public class OfficialWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnReportChild = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        btnView = new javax.swing.JButton();
-        btnRequestMedical = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        lblusername = new javax.swing.JLabel();
-        btnMedicalReports = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        btnChildReport = new javax.swing.JButton();
+        spRequestTable = new javax.swing.JScrollPane();
+        tblworkRequest = new javax.swing.JTable();
+        btnReportSummary = new javax.swing.JButton();
+        btnMedicalExamiation = new javax.swing.JButton();
+        lblWelcome = new javax.swing.JLabel();
+        lblUserName = new javax.swing.JLabel();
+        btnAccessMedicalExam = new javax.swing.JButton();
+        lblAccess = new javax.swing.JLabel();
+        lblAdd = new javax.swing.JLabel();
+        btnAdd = new javax.swing.JButton();
+        lblImg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(177, 201, 226));
+        setLayout(null);
 
-        btnReportChild.setBackground(new java.awt.Color(255, 255, 255));
-        btnReportChild.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btnReportChild.setText("Report Child");
-        btnReportChild.addActionListener(new java.awt.event.ActionListener() {
+        btnChildReport.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnChildReport.setText("Report Child");
+        btnChildReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReportChildActionPerformed(evt);
+                btnChildReportActionPerformed(evt);
             }
         });
+        add(btnChildReport);
+        btnChildReport.setBounds(290, 370, 250, 39);
 
-        workRequestJTable.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblworkRequest.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tblworkRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -120,135 +123,100 @@ public class OfficialWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
-        if (workRequestJTable.getColumnModel().getColumnCount() > 0) {
-            workRequestJTable.getColumnModel().getColumn(0).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(1).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(2).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(3).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(4).setResizable(false);
+        spRequestTable.setViewportView(tblworkRequest);
+        if (tblworkRequest.getColumnModel().getColumnCount() > 0) {
+            tblworkRequest.getColumnModel().getColumn(0).setResizable(false);
+            tblworkRequest.getColumnModel().getColumn(1).setResizable(false);
+            tblworkRequest.getColumnModel().getColumn(2).setResizable(false);
+            tblworkRequest.getColumnModel().getColumn(3).setResizable(false);
+            tblworkRequest.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        btnView.setBackground(new java.awt.Color(255, 255, 255));
-        btnView.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btnView.setText(" Investigation Report Summary");
-        btnView.addActionListener(new java.awt.event.ActionListener() {
+        add(spRequestTable);
+        spRequestTable.setBounds(286, 135, 920, 207);
+
+        btnReportSummary.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnReportSummary.setText(" Investigation Report Summary");
+        btnReportSummary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
+                btnReportSummaryActionPerformed(evt);
             }
         });
+        add(btnReportSummary);
+        btnReportSummary.setBounds(570, 370, 300, 37);
 
-        btnRequestMedical.setBackground(new java.awt.Color(255, 255, 255));
-        btnRequestMedical.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btnRequestMedical.setText("Request Medical Examination");
-        btnRequestMedical.addActionListener(new java.awt.event.ActionListener() {
+        btnMedicalExamiation.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnMedicalExamiation.setText("Request Medical Examination");
+        btnMedicalExamiation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRequestMedicalActionPerformed(evt);
+                btnMedicalExamiationActionPerformed(evt);
             }
         });
+        add(btnMedicalExamiation);
+        btnMedicalExamiation.setBounds(910, 370, 300, 41);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel2.setText("Welcome");
+        lblWelcome.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblWelcome.setText("Welcome");
+        add(lblWelcome);
+        lblWelcome.setBounds(37, 57, 94, 29);
 
-        lblusername.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        lblusername.setText("username");
+        lblUserName.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblUserName.setText("username");
+        add(lblUserName);
+        lblUserName.setBounds(134, 57, 99, 29);
 
-        btnMedicalReports.setBackground(new java.awt.Color(255, 255, 255));
-        btnMedicalReports.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btnMedicalReports.setText("click here");
-        btnMedicalReports.addActionListener(new java.awt.event.ActionListener() {
+        btnAccessMedicalExam.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnAccessMedicalExam.setText("ACCESS");
+        btnAccessMedicalExam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMedicalReportsActionPerformed(evt);
+                btnAccessMedicalExamActionPerformed(evt);
             }
         });
+        add(btnAccessMedicalExam);
+        btnAccessMedicalExam.setBounds(890, 530, 120, 40);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel1.setText(" To Access Medical Examination Reports");
+        lblAccess.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblAccess.setText(" To Access Medical Examination Reports");
+        add(lblAccess);
+        lblAccess.setBounds(550, 530, 370, 40);
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel4.setText(" To Add Selected Child to Child Adoption Catalogue");
+        lblAdd.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblAdd.setText(" To Add Selected Child to Child Adoption Catalogue");
+        add(lblAdd);
+        lblAdd.setBounds(460, 460, 440, 40);
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setText("click here");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnAdd.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnAdd.setText("ADD");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnAddActionPerformed(evt);
             }
         });
+        add(btnAdd);
+        btnAdd.setBounds(890, 460, 120, 40);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblusername)
-                .addGap(18, 56, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnReportChild, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
-                        .addComponent(btnView)
-                        .addGap(81, 81, 81)
-                        .addComponent(btnRequestMedical)))
-                .addContainerGap(38, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(379, 379, 379)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel1))
-                .addGap(64, 64, 64)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2)
-                    .addComponent(btnMedicalReports))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(lblusername))
-                .addGap(49, 49, 49)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnReportChild, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRequestMedical, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jButton2))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(btnMedicalReports))
-                .addContainerGap(75, Short.MAX_VALUE))
-        );
+        lblImg.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/report-1.jpg"))); // NOI18N
+        add(lblImg);
+        lblImg.setBounds(-1820, -120, 3500, 910);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnReportChildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportChildActionPerformed
+    private void btnChildReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChildReportActionPerformed
         // TODO add your handling code here:
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("RequestInvestigationJPanel", new RequestInvestigationJPanel(userProcessContainer, userAccount, enterprise));
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnReportChildActionPerformed
+    }//GEN-LAST:event_btnChildReportActionPerformed
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+    private void btnReportSummaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportSummaryActionPerformed
         // TODO add your handling code here:
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblworkRequest.getSelectedRow();
         
         if (selectedRow < 0){
             return;
         }
         
-        LabTestWorkRequest request = (LabTestWorkRequest)workRequestJTable.getValueAt(selectedRow, 0);
+        LabTestWorkRequest request = (LabTestWorkRequest)tblworkRequest.getValueAt(selectedRow, 0);
         if(request.getStatus().equals("Closed"))
         {
         ReportSummary processWorkRequestJPanel = new ReportSummary(userProcessContainer, request);
@@ -259,39 +227,39 @@ public class OfficialWorkAreaJPanel extends javax.swing.JPanel {
         else{
             JOptionPane.showMessageDialog(null, "Report Summary not Available");
         }
-    }//GEN-LAST:event_btnViewActionPerformed
+    }//GEN-LAST:event_btnReportSummaryActionPerformed
 
-    private void btnRequestMedicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestMedicalActionPerformed
+    private void btnMedicalExamiationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicalExamiationActionPerformed
         // TODO add your handling code here:
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblworkRequest.getSelectedRow();
         
         if (selectedRow < 0){
             return;
         }
         
-        LabTestWorkRequest request = (LabTestWorkRequest)workRequestJTable.getValueAt(selectedRow, 0);
+        LabTestWorkRequest request = (LabTestWorkRequest)tblworkRequest.getValueAt(selectedRow, 0);
         RequestMedicalExaminationJPanel processWorkRequestJPanel = new RequestMedicalExaminationJPanel(userProcessContainer, userAccount, enterprise, request, system);
         userProcessContainer.add("RequestMedicalExaminationJPanel", processWorkRequestJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
         
-    }//GEN-LAST:event_btnRequestMedicalActionPerformed
+    }//GEN-LAST:event_btnMedicalExamiationActionPerformed
 
-    private void btnMedicalReportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicalReportsActionPerformed
+    private void btnAccessMedicalExamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccessMedicalExamActionPerformed
         // TODO add your handling code here:
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("MedicalReportsJPanel", new MedicalReportsJPanel(userProcessContainer, userAccount, enterprise));
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnMedicalReportsActionPerformed
+    }//GEN-LAST:event_btnAccessMedicalExamActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblworkRequest.getSelectedRow();
         if (selectedRow < 0){
             return;
         }
         
-        LabTestWorkRequest request = (LabTestWorkRequest)workRequestJTable.getValueAt(selectedRow, 0);
+        LabTestWorkRequest request = (LabTestWorkRequest)tblworkRequest.getValueAt(selectedRow, 0);
         if(request.getAdd()==Boolean.TRUE){
             JOptionPane.showMessageDialog(null, "Child Entry already exists in the Catalogue");
         }
@@ -329,20 +297,21 @@ public class OfficialWorkAreaJPanel extends javax.swing.JPanel {
             populateRequestTable();
         }
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnAddActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnMedicalReports;
-    private javax.swing.JButton btnReportChild;
-    private javax.swing.JButton btnRequestMedical;
-    private javax.swing.JButton btnView;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblusername;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JButton btnAccessMedicalExam;
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnChildReport;
+    private javax.swing.JButton btnMedicalExamiation;
+    private javax.swing.JButton btnReportSummary;
+    private javax.swing.JLabel lblAccess;
+    private javax.swing.JLabel lblAdd;
+    private javax.swing.JLabel lblImg;
+    private javax.swing.JLabel lblUserName;
+    private javax.swing.JLabel lblWelcome;
+    private javax.swing.JScrollPane spRequestTable;
+    private javax.swing.JTable tblworkRequest;
     // End of variables declaration//GEN-END:variables
 }

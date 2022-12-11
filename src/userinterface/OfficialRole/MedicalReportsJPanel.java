@@ -11,6 +11,9 @@ import Business.WorkQueue.LabTestWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -32,10 +35,15 @@ public class MedicalReportsJPanel extends javax.swing.JPanel {
                 this.userAccount = userAccount;
                 this.enterprise = enterprise;
                 populateRequestTable();
+                
+                                Icon i = lblImg.getIcon();
+        ImageIcon icon = (ImageIcon)i;
+        Image image = icon.getImage().getScaledInstance(lblImg.getWidth() , lblImg.getHeight(), Image.SCALE_SMOOTH);
+        lblImg.setIcon(new ImageIcon(image));
     }
 
         public void populateRequestTable(){
-        DefaultTableModel model = (DefaultTableModel) tblMedical.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblMedicalReport.getModel();
         
         model.setRowCount(0);
         for (WorkRequest request : userAccount.getWorkQueue().getWorkRequestList()){
@@ -66,15 +74,17 @@ public class MedicalReportsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblMedical = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        spMedical = new javax.swing.JScrollPane();
+        tblMedicalReport = new javax.swing.JTable();
+        btnMedicalReport = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        lblImg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(177, 201, 226));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
 
-        tblMedical.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        tblMedical.setModel(new javax.swing.table.DefaultTableModel(
+        tblMedicalReport.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tblMedicalReport.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -82,66 +92,50 @@ public class MedicalReportsJPanel extends javax.swing.JPanel {
                 "Child Name", "Examination Status", "Doctor", "Medical Report"
             }
         ));
-        jScrollPane1.setViewportView(tblMedical);
+        spMedical.setViewportView(tblMedicalReport);
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("View Medical Report");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        add(spMedical);
+        spMedical.setBounds(320, 120, 705, 213);
+
+        btnMedicalReport.setBackground(new java.awt.Color(0, 0, 0));
+        btnMedicalReport.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnMedicalReport.setForeground(new java.awt.Color(255, 255, 255));
+        btnMedicalReport.setText("View Medical Report");
+        btnMedicalReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnMedicalReportActionPerformed(evt);
             }
         });
+        add(btnMedicalReport);
+        btnMedicalReport.setBounds(530, 400, 215, 49);
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setText("<<Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnBack.setText("<<<");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
+        add(btnBack);
+        btnBack.setBounds(240, 30, 72, 38);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jButton2)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(194, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 705, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(119, 119, 119))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(372, 372, 372))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(159, Short.MAX_VALUE))
-        );
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/investigation.jpg"))); // NOI18N
+        lblImg.setMaximumSize(new java.awt.Dimension(1680, 1050));
+        lblImg.setMinimumSize(new java.awt.Dimension(1680, 1050));
+        lblImg.setPreferredSize(new java.awt.Dimension(1680, 1050));
+        add(lblImg);
+        lblImg.setBounds(20, 0, 1470, 770);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnMedicalReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicalReportActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblMedical.getSelectedRow();
+        int selectedRow = tblMedicalReport.getSelectedRow();
         
         if (selectedRow < 0){
             return;
         }
         
-        LabTestWorkRequest request = (LabTestWorkRequest)tblMedical.getValueAt(selectedRow, 0);
+        LabTestWorkRequest request = (LabTestWorkRequest)tblMedicalReport.getValueAt(selectedRow, 0);
         if(request.getMedicalReport()==null || request.getMedicalReport().isEmpty()){
             JOptionPane.showMessageDialog(null, "Medical Report not Available");
         }
@@ -151,9 +145,9 @@ public class MedicalReportsJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnMedicalReportActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -162,13 +156,14 @@ public class MedicalReportsJPanel extends javax.swing.JPanel {
         owap.populateRequestTable();
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblMedical;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnMedicalReport;
+    private javax.swing.JLabel lblImg;
+    private javax.swing.JScrollPane spMedical;
+    private javax.swing.JTable tblMedicalReport;
     // End of variables declaration//GEN-END:variables
 }

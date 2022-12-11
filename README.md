@@ -9,15 +9,15 @@ Pushed and merged src package - User Account-
 
 Pushed and merged src package - Employee-
 
-Pushed and merged src UI package - Doctor
+Pushed and merged src UI package - Doctor role
 
-Pushed and merged src UI package - LabAssistant-
+Pushed and merged src UI package - LabAssistant role
 
-Pushed and merged src UI package - Officials-
+Pushed and merged src UI package - Officials role
 
-Pushed and merged src UI package - Investigation-
+Pushed and merged src UI package - Investigation role
 
-Pushed and merged src UI package - Doctor(made changes to all the panels in the package.)
+Pushed and merged src UI package - Doctor (made changes to all the panels in the package.)
 
 Pushed and merged src UI package - Officials-(made changes in 2 panels.)
 

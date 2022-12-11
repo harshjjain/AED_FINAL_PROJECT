@@ -262,6 +262,8 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
         }
         popData();
+        nameJTextField.setText(password);
+        passwordJTextField.setText("");
     }//GEN-LAST:event_AddUserJButtonActionPerformed
 
     private void backjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backjButton1ActionPerformed

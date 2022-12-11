@@ -222,6 +222,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         organization.getEmployeeDirectory().createEmployee(name);
         populateTable(organization);
         }
+        nameJTextField.setText("");
     }//GEN-LAST:event_addJButtonActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed

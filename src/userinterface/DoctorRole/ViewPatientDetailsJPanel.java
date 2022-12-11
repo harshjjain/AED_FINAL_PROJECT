@@ -8,6 +8,9 @@ package userinterface.DoctorRole;
 import Business.WorkQueue.LabTestWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import userinterface.InvestigatorRole.InvestigatorWorkAreaJPanel;
 
@@ -29,6 +32,11 @@ public class ViewPatientDetailsJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.request = request;
         populateFields();    
+        
+        Icon i = lblImg.getIcon();
+        ImageIcon icon = (ImageIcon)i;
+        Image image = icon.getImage().getScaledInstance(lblImg.getWidth() , lblImg.getHeight(), Image.SCALE_SMOOTH);
+        lblImg.setIcon(new ImageIcon(image));
     }
 
     public void populateFields(){
@@ -56,7 +64,7 @@ public class ViewPatientDetailsJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         lblImg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 102, 204));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
         txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -67,16 +75,16 @@ public class ViewPatientDetailsJPanel extends javax.swing.JPanel {
         add(txtGender);
         txtGender.setBounds(621, 142, 141, 23);
 
+        lblName.setBackground(new java.awt.Color(0, 0, 0));
         lblName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblName.setForeground(new java.awt.Color(255, 255, 255));
         lblName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblName.setText("Name of Child:");
         lblName.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(lblName);
         lblName.setBounds(108, 142, 140, 21);
 
+        lblMedicalIssues.setBackground(new java.awt.Color(0, 0, 0));
         lblMedicalIssues.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblMedicalIssues.setForeground(new java.awt.Color(255, 255, 255));
         lblMedicalIssues.setText("Medical issues (if Any):");
         add(lblMedicalIssues);
         lblMedicalIssues.setBounds(150, 250, 200, 21);
@@ -89,8 +97,8 @@ public class ViewPatientDetailsJPanel extends javax.swing.JPanel {
         add(spMedicalIssues);
         spMedicalIssues.setBounds(375, 214, 427, 111);
 
+        lblGender.setBackground(new java.awt.Color(0, 0, 0));
         lblGender.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblGender.setForeground(new java.awt.Color(255, 255, 255));
         lblGender.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblGender.setText("Gender:");
         add(lblGender);
@@ -105,8 +113,14 @@ public class ViewPatientDetailsJPanel extends javax.swing.JPanel {
         });
         add(btnBack);
         btnBack.setBounds(54, 40, 90, 37);
+
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/doctor-5.png"))); // NOI18N
+        lblImg.setToolTipText("");
+        lblImg.setMaximumSize(new java.awt.Dimension(1680, 1050));
+        lblImg.setMinimumSize(new java.awt.Dimension(1680, 1050));
+        lblImg.setPreferredSize(new java.awt.Dimension(1680, 1050));
         add(lblImg);
-        lblImg.setBounds(10, 0, 900, 560);
+        lblImg.setBounds(120, -50, 1680, 1050);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

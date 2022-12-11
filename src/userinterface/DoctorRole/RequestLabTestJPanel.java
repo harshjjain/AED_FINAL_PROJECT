@@ -12,8 +12,11 @@ import Business.UserAccount.UserAccount;
 import Business.WorkQueue.LabTestWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.awt.Image;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -38,6 +41,11 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount;    
         this.request = request;
         populatefields();
+        
+        Icon i = lblImg.getIcon();
+        ImageIcon icon = (ImageIcon)i;
+        Image image = icon.getImage().getScaledInstance(lblImg.getWidth() , lblImg.getHeight(), Image.SCALE_SMOOTH);
+        lblImg.setIcon(new ImageIcon(image));
     }
     
     public void populatefields(){
@@ -62,9 +70,9 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         spTest = new javax.swing.JScrollPane();
         txtTestsDone = new javax.swing.JTextArea();
         lblTestDone = new javax.swing.JLabel();
-        lblimg = new javax.swing.JLabel();
+        lblImg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 102, 204));
+        setBackground(new java.awt.Color(51, 204, 255));
         setLayout(null);
 
         btnRequestTest.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -75,7 +83,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             }
         });
         add(btnRequestTest);
-        btnRequestTest.setBounds(580, 420, 170, 50);
+        btnRequestTest.setBounds(550, 280, 170, 50);
 
         btnBack.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnBack.setText("<<<");
@@ -89,7 +97,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
 
         txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtName);
-        txtName.setBounds(190, 150, 220, 30);
+        txtName.setBounds(180, 180, 220, 30);
 
         txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtGender.addActionListener(new java.awt.event.ActionListener() {
@@ -98,22 +106,20 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             }
         });
         add(txtGender);
-        txtGender.setBounds(540, 150, 140, 30);
+        txtGender.setBounds(540, 180, 140, 30);
 
         lblName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblName.setForeground(new java.awt.Color(255, 255, 255));
         lblName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblName.setText("Child Name:");
         lblName.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(lblName);
-        lblName.setBounds(60, 150, 120, 30);
+        lblName.setBounds(40, 180, 120, 30);
 
         lblGender.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblGender.setForeground(new java.awt.Color(255, 255, 255));
         lblGender.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblGender.setText("Gender:");
         add(lblGender);
-        lblGender.setBounds(450, 150, 80, 30);
+        lblGender.setBounds(450, 180, 80, 30);
 
         txtTestsDone.setColumns(20);
         txtTestsDone.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -121,15 +127,19 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         spTest.setViewportView(txtTestsDone);
 
         add(spTest);
-        spTest.setBounds(230, 240, 290, 90);
+        spTest.setBounds(200, 260, 290, 90);
 
         lblTestDone.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblTestDone.setForeground(new java.awt.Color(255, 255, 255));
         lblTestDone.setText("  Tests to be Done:");
         add(lblTestDone);
-        lblTestDone.setBounds(70, 270, 160, 20);
-        add(lblimg);
-        lblimg.setBounds(20, 20, 0, 0);
+        lblTestDone.setBounds(30, 290, 160, 20);
+
+        lblImg.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/lab-assistant.png"))); // NOI18N
+        lblImg.setMaximumSize(new java.awt.Dimension(1680, 1050));
+        lblImg.setPreferredSize(new java.awt.Dimension(1680, 1050));
+        add(lblImg);
+        lblImg.setBounds(-10, -200, 1680, 1050);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRequestTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestTestActionPerformed
@@ -153,6 +163,11 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Request successfully sent");
         }
         }
+        
+        txtName.setText("");
+        txtGender.setText("");
+        txtTestsDone.setText("");
+        
     }//GEN-LAST:event_btnRequestTestActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -175,9 +190,9 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnRequestTest;
     private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblImg;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblTestDone;
-    private javax.swing.JLabel lblimg;
     private javax.swing.JScrollPane spTest;
     private javax.swing.JTextField txtGender;
     private javax.swing.JTextField txtName;

@@ -10,7 +10,9 @@ import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
 import java.awt.CardLayout;
+import java.awt.Image;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
@@ -30,8 +32,17 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.ecosystem=ecosystem;
-        populateTree();
+        populateTree();        
+        scaleImage();
     }
+ public void scaleImage()
+ {
+        ImageIcon icon=new ImageIcon("C:\\Users\\16084\\Documents\\GitHub\\AED_FINAL_PROJECT\\src\\Image\\Manage network UI.JPG");
+        Image img=icon.getImage();
+        Image imgScale=img.getScaledInstance(lblBG.getWidth(), lblBG.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon=new ImageIcon(imgScale);
+        lblBG.setIcon(scaledIcon);
+ }
     
     public void populateTree(){
         DefaultTreeModel model=(DefaultTreeModel)Ecosystem.getModel();
@@ -90,11 +101,12 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnCreateNetwork = new javax.swing.JButton();
         btnCreateEnterprise = new javax.swing.JButton();
         btnCreateAdmin = new javax.swing.JButton();
+        lblBG = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(177, 201, 226));
         setLayout(new java.awt.BorderLayout());
 
-        jPanel1.setBackground(new java.awt.Color(177, 201, 226));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         Ecosystem.addTreeSelectionListener(new javax.swing.event.TreeSelectionListener() {
             public void valueChanged(javax.swing.event.TreeSelectionEvent evt) {
@@ -121,6 +133,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jSplitPane.setLeftComponent(jPanel1);
 
         jPanel2.setBackground(new java.awt.Color(177, 201, 226));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1800, 1440));
         jPanel2.setLayout(null);
 
         btnCreateNetwork.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -152,6 +165,10 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         jPanel2.add(btnCreateAdmin);
         btnCreateAdmin.setBounds(68, 408, 291, 64);
+
+        lblBG.setPreferredSize(new java.awt.Dimension(1800, 1440));
+        jPanel2.add(lblBG);
+        lblBG.setBounds(0, 0, 1800, 1440);
 
         jSplitPane.setRightComponent(jPanel2);
 
@@ -197,5 +214,6 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSplitPane jSplitPane;
+    private javax.swing.JLabel lblBG;
     // End of variables declaration//GEN-END:variables
 }

@@ -13,6 +13,9 @@ import Business.UserAccount.UserAccount;
 import Business.WorkQueue.LabTestWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import userinterface.OfficialRole.ReportSummary;
@@ -40,6 +43,10 @@ public class LawyerWorkAreaJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.system = system; 
         populateFields();
+        Icon i = lblBG.getIcon();
+        ImageIcon icon = (ImageIcon)i;
+        Image image = icon.getImage().getScaledInstance(lblBG.getWidth() , lblBG.getHeight(), Image.SCALE_SMOOTH);
+        lblBG.setIcon(new ImageIcon(image));
     }
     
         public void populateFields(){
@@ -75,9 +82,13 @@ public class LawyerWorkAreaJPanel extends javax.swing.JPanel {
         tblRequest = new javax.swing.JTable();
         btnClick = new javax.swing.JButton();
         lblClick = new javax.swing.JLabel();
+        lblBG = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 102, 204));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(2000, 1333));
+        setLayout(null);
 
+        tblRequest.setBackground(new java.awt.Color(221, 221, 221));
         tblRequest.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tblRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -89,6 +100,10 @@ public class LawyerWorkAreaJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblRequest);
 
+        add(jScrollPane1);
+        jScrollPane1.setBounds(20, 20, 630, 340);
+
+        btnClick.setBackground(new java.awt.Color(221, 221, 221));
         btnClick.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnClick.setText("Click here");
         btnClick.addActionListener(new java.awt.event.ActionListener() {
@@ -96,37 +111,21 @@ public class LawyerWorkAreaJPanel extends javax.swing.JPanel {
                 btnClickActionPerformed(evt);
             }
         });
+        add(btnClick);
+        btnClick.setBounds(40, 390, 120, 28);
 
         lblClick.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblClick.setForeground(new java.awt.Color(255, 255, 255));
         lblClick.setText("To View Selected Foster Parent Document");
+        add(lblClick);
+        lblClick.setBounds(180, 390, 370, 24);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 774, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(233, 233, 233)
-                        .addComponent(btnClick)
-                        .addGap(39, 39, 39)
-                        .addComponent(lblClick)))
-                .addContainerGap(214, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnClick)
-                    .addComponent(lblClick, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(102, Short.MAX_VALUE))
-        );
+        lblBG.setForeground(new java.awt.Color(0, 0, 51));
+        lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/lawyer.jpg"))); // NOI18N
+        lblBG.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lblBG.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        add(lblBG);
+        lblBG.setBounds(0, 0, 2000, 1333);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClickActionPerformed
@@ -150,6 +149,7 @@ public class LawyerWorkAreaJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClick;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblBG;
     private javax.swing.JLabel lblClick;
     private javax.swing.JTable tblRequest;
     // End of variables declaration//GEN-END:variables

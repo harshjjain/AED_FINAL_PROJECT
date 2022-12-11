@@ -12,8 +12,10 @@ import Business.Organization.Organization;
 import Business.WorkQueue.LabTestWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.awt.Image;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -37,6 +39,10 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         this.request = request;
         this.enterprise = enterprise;
         populateFields();
+        Icon i = lblBG.getIcon();
+        ImageIcon icon = (ImageIcon)i;
+        Image image = icon.getImage().getScaledInstance(lblBG.getWidth() , lblBG.getHeight(), Image.SCALE_SMOOTH);
+        lblBG.setIcon(new ImageIcon(image));
     }
     
     public void populateFields(){
@@ -91,7 +97,7 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         lblHeader = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         txtGender = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        lblBG = new javax.swing.JLabel();
 
         jLabel4.setText("Age");
 
@@ -100,8 +106,11 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         jLabel15.setText("Sex");
 
         setBackground(new java.awt.Color(0, 102, 204));
+        setOpaque(false);
+        setPreferredSize(new java.awt.Dimension(1650, 1050));
         setLayout(null);
 
+        txtFirstName.setBackground(new java.awt.Color(249, 241, 234));
         txtFirstName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtFirstName);
         txtFirstName.setBounds(699, 205, 250, 27);
@@ -112,6 +121,7 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         add(lblFirstName);
         lblFirstName.setBounds(554, 210, 100, 21);
 
+        txtLastName.setBackground(new java.awt.Color(249, 241, 234));
         txtLastName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtLastName);
         txtLastName.setBounds(700, 250, 250, 27);
@@ -122,6 +132,7 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         add(lblLastName);
         lblLastName.setBounds(563, 255, 110, 21);
 
+        txtAge.setBackground(new java.awt.Color(249, 241, 234));
         txtAge.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtAge);
         txtAge.setBounds(700, 290, 60, 27);
@@ -132,6 +143,7 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         add(lblAge);
         lblAge.setBounds(610, 290, 40, 30);
 
+        txtProfession.setBackground(new java.awt.Color(249, 241, 234));
         txtProfession.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtProfession);
         txtProfession.setBounds(700, 370, 250, 27);
@@ -148,6 +160,7 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         add(lblGender);
         lblGender.setBounds(586, 330, 70, 20);
 
+        txtSSN.setBackground(new java.awt.Color(249, 241, 234));
         txtSSN.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtSSN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,6 +182,7 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         add(lblAnnualIncome);
         lblAnnualIncome.setBounds(501, 450, 190, 30);
 
+        txtAnnualIncome.setBackground(new java.awt.Color(249, 241, 234));
         txtAnnualIncome.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtAnnualIncome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,10 +198,12 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         add(lblLiabilities);
         lblLiabilities.setBounds(490, 490, 170, 30);
 
+        txtLiabilities.setBackground(new java.awt.Color(249, 241, 234));
         txtLiabilities.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtLiabilities);
         txtLiabilities.setBounds(700, 490, 250, 27);
 
+        txtPartner.setBackground(new java.awt.Color(249, 241, 234));
         txtPartner.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtPartner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,11 +225,13 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         add(lblSavings);
         lblSavings.setBounds(394, 580, 270, 30);
 
+        txtSavings.setBackground(new java.awt.Color(249, 241, 234));
         txtSavings.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtSavings);
         txtSavings.setBounds(700, 580, 250, 27);
 
-        btnSave.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnSave.setBackground(new java.awt.Color(249, 241, 234));
+        btnSave.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,14 +259,17 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         add(lblEthnicity);
         lblEthnicity.setBounds(81, 315, 90, 21);
 
+        txtChildName.setBackground(new java.awt.Color(249, 241, 234));
         txtChildName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtChildName);
         txtChildName.setBounds(193, 220, 200, 27);
 
+        txtChildGender.setBackground(new java.awt.Color(249, 241, 234));
         txtChildGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtChildGender);
         txtChildGender.setBounds(193, 265, 98, 27);
 
+        txtEthnicity.setBackground(new java.awt.Color(249, 241, 234));
         txtEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtEthnicity);
         txtEthnicity.setBounds(193, 310, 200, 27);
@@ -273,14 +294,18 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(28, 27, 72, 37);
 
+        txtGender.setBackground(new java.awt.Color(249, 241, 234));
         txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtGender);
         txtGender.setBounds(700, 330, 64, 27);
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/guardian.jpg"))); // NOI18N
-        add(jLabel1);
-        jLabel1.setBounds(0, 0, 1000, 730);
+        lblBG.setForeground(new java.awt.Color(255, 255, 255));
+        lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/guardian.jpg"))); // NOI18N
+        lblBG.setMaximumSize(new java.awt.Dimension(1650, 1050));
+        lblBG.setMinimumSize(new java.awt.Dimension(1650, 1050));
+        lblBG.setPreferredSize(new java.awt.Dimension(1650, 1050));
+        add(lblBG);
+        lblBG.setBounds(0, 0, 1650, 1050);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtPartnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPartnerActionPerformed
@@ -364,7 +389,6 @@ public class FosterParentJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSave;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
@@ -372,6 +396,7 @@ public class FosterParentJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblAnnualIncome;
+    private javax.swing.JLabel lblBG;
     private javax.swing.JLabel lblChildGender;
     private javax.swing.JLabel lblChildName;
     private javax.swing.JLabel lblEthnicity;

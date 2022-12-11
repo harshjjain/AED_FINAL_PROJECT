@@ -38,149 +38,126 @@ public class InvestigatorReportAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        lblCloseInvestigation = new javax.swing.JLabel();
+        lblReportSummary = new javax.swing.JLabel();
+        spReportSummarry = new javax.swing.JScrollPane();
         txtReportSummary = new javax.swing.JTextArea();
-        txtLastName = new javax.swing.JTextField();
-        txtFirstName = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        btnClose = new javax.swing.JToggleButton();
+        txtChildLastName = new javax.swing.JTextField();
+        txtChildFirstName = new javax.swing.JTextField();
+        lblFName = new javax.swing.JLabel();
+        lblLName = new javax.swing.JLabel();
+        btnCloseCase = new javax.swing.JToggleButton();
         btnBack = new javax.swing.JButton();
-        btnSave = new javax.swing.JButton();
+        btnSaveChoice = new javax.swing.JButton();
+        lblImg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(177, 201, 226));
+        setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel1.setText(" Close Investigation:");
+        lblCloseInvestigation.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblCloseInvestigation.setText(" Close Investigation:");
+        add(lblCloseInvestigation);
+        lblCloseInvestigation.setBounds(286, 143, 200, 21);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setText("Report Summary:");
+        lblReportSummary.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblReportSummary.setText("Report Summary:");
+        add(lblReportSummary);
+        lblReportSummary.setBounds(302, 340, 160, 21);
 
+        txtReportSummary.setBackground(new java.awt.Color(255, 255, 153));
         txtReportSummary.setColumns(20);
         txtReportSummary.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtReportSummary.setRows(5);
-        jScrollPane1.setViewportView(txtReportSummary);
+        spReportSummarry.setViewportView(txtReportSummary);
 
-        txtLastName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        add(spReportSummarry);
+        spReportSummarry.setBounds(470, 280, 278, 146);
 
-        txtFirstName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtFirstName.addActionListener(new java.awt.event.ActionListener() {
+        txtChildLastName.setBackground(new java.awt.Color(255, 255, 153));
+        txtChildLastName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        add(txtChildLastName);
+        txtChildLastName.setBounds(470, 240, 278, 23);
+
+        txtChildFirstName.setBackground(new java.awt.Color(255, 255, 153));
+        txtChildFirstName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtChildFirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFirstNameActionPerformed(evt);
+                txtChildFirstNameActionPerformed(evt);
             }
         });
+        add(txtChildFirstName);
+        txtChildFirstName.setBounds(470, 200, 278, 23);
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Child's First Name:");
+        lblFName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblFName.setText("First Name :");
+        add(lblFName);
+        lblFName.setBounds(347, 202, 110, 21);
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setText("Child's Last Name:");
+        lblLName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblLName.setText("Last Name:");
+        add(lblLName);
+        lblLName.setBounds(354, 243, 110, 21);
 
-        btnClose.setBackground(new java.awt.Color(255, 255, 255));
-        btnClose.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        btnClose.setText("Close Case");
-        btnClose.addActionListener(new java.awt.event.ActionListener() {
+        btnCloseCase.setBackground(new java.awt.Color(255, 255, 153));
+        btnCloseCase.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnCloseCase.setText("Close Case");
+        btnCloseCase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCloseActionPerformed(evt);
+                btnCloseCaseActionPerformed(evt);
             }
         });
+        add(btnCloseCase);
+        btnCloseCase.setBounds(470, 130, 278, 39);
 
-        btnBack.setBackground(new java.awt.Color(255, 255, 255));
-        btnBack.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btnBack.setText("<< Back");
+        btnBack.setBackground(new java.awt.Color(255, 255, 153));
+        btnBack.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnBack.setText("<<<");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack);
+        btnBack.setBounds(60, 20, 72, 36);
 
-        btnSave.setBackground(new java.awt.Color(255, 255, 255));
-        btnSave.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btnSave.setText("Save");
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
+        btnSaveChoice.setBackground(new java.awt.Color(255, 255, 153));
+        btnSaveChoice.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnSaveChoice.setText("Save");
+        btnSaveChoice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
+                btnSaveChoiceActionPerformed(evt);
             }
         });
+        add(btnSaveChoice);
+        btnSaveChoice.setBounds(820, 470, 120, 49);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(304, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(69, 69, 69)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
-                    .addComponent(txtLastName)
-                    .addComponent(txtFirstName)
-                    .addComponent(btnClose, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(294, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(btnBack)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(513, 513, 513)
-                .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(btnBack)
-                .addGap(85, 85, 85)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(jLabel2)))
-                .addGap(18, 18, 18)
-                .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(95, Short.MAX_VALUE))
-        );
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/investigation-3.jpg"))); // NOI18N
+        lblImg.setMaximumSize(new java.awt.Dimension(50, 50));
+        lblImg.setMinimumSize(new java.awt.Dimension(50, 50));
+        lblImg.setPreferredSize(new java.awt.Dimension(1680, 1050));
+        add(lblImg);
+        lblImg.setBounds(-450, 0, 2010, 1370);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFirstNameActionPerformed
+    private void txtChildFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtChildFirstNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtFirstNameActionPerformed
+    }//GEN-LAST:event_txtChildFirstNameActionPerformed
 
-    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+    private void btnSaveChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveChoiceActionPerformed
         // TODO add your handling code here:
-        if(txtReportSummary == null ||  txtReportSummary.getText().isEmpty() || txtFirstName == null||txtFirstName.getText().isEmpty() || txtLastName == null || txtLastName.getText().isEmpty())
+        if(txtReportSummary == null ||  txtReportSummary.getText().isEmpty() || txtChildFirstName == null||txtChildFirstName.getText().isEmpty() || txtChildLastName == null || txtChildLastName.getText().isEmpty())
         {
                                 JOptionPane.showMessageDialog(null, "One or more fields may be Empty");
 
         }
         else{
-        request.setChildName(txtFirstName.getText()+" "+txtLastName.getText());
+        request.setChildName(txtChildFirstName.getText()+" "+txtChildLastName.getText());
         request.setReport(txtReportSummary.getText());
         if(txtReportSummary!=null)
         {
             request.setTestResult("Available");
         }
-        if(btnClose.isSelected())
+        if(btnCloseCase.isSelected())
         {
             request.setStatus("Closed");
                     JOptionPane.showMessageDialog(null, "Case Closed Successfully");
@@ -192,7 +169,7 @@ public class InvestigatorReportAreaJPanel extends javax.swing.JPanel {
         }
         }
         
-    }//GEN-LAST:event_btnSaveActionPerformed
+    }//GEN-LAST:event_btnSaveChoiceActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -205,22 +182,23 @@ public class InvestigatorReportAreaJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
+    private void btnCloseCaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseCaseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCloseActionPerformed
+    }//GEN-LAST:event_btnCloseCaseActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JToggleButton btnClose;
-    private javax.swing.JButton btnSave;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtLastName;
+    private javax.swing.JToggleButton btnCloseCase;
+    private javax.swing.JButton btnSaveChoice;
+    private javax.swing.JLabel lblCloseInvestigation;
+    private javax.swing.JLabel lblFName;
+    private javax.swing.JLabel lblImg;
+    private javax.swing.JLabel lblLName;
+    private javax.swing.JLabel lblReportSummary;
+    private javax.swing.JScrollPane spReportSummarry;
+    private javax.swing.JTextField txtChildFirstName;
+    private javax.swing.JTextField txtChildLastName;
     private javax.swing.JTextArea txtReportSummary;
     // End of variables declaration//GEN-END:variables
 }

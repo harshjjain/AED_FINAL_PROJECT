@@ -54,7 +54,7 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         btnUploadXray = new javax.swing.JButton();
         btnCTScan = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lblImg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(102, 204, 255));
         setLayout(null);
@@ -113,9 +113,9 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         add(btnCTScan);
         btnCTScan.setBounds(540, 520, 150, 37);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/lab-assistant.png"))); // NOI18N
-        add(jLabel1);
-        jLabel1.setBounds(-20, -70, 1280, 720);
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/lab-assistant.png"))); // NOI18N
+        add(lblImg);
+        lblImg.setBounds(-20, -70, 1280, 720);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -179,9 +179,9 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCTScan;
     private javax.swing.JButton btnSubmit;
     private javax.swing.JButton btnUploadXray;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblImg;
     private javax.swing.JTextArea txtTestReport;
     // End of variables declaration//GEN-END:variables
 }

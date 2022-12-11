@@ -8,6 +8,8 @@ package userinterface.DoctorRole;
 import Business.WorkQueue.LabTestWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.awt.Image;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
@@ -24,6 +26,10 @@ public class ViewTestResultsJPanel extends javax.swing.JPanel {
      */
     public ViewTestResultsJPanel() {
         initComponents();
+        Icon i = lblImg.getIcon();
+        ImageIcon icon = (ImageIcon)i;
+        Image image = icon.getImage().getScaledInstance(lblImg.getWidth() , lblImg.getHeight(), Image.SCALE_SMOOTH);
+        lblImg.setIcon(new ImageIcon(image));
         
     }
 
@@ -71,7 +77,7 @@ public class ViewTestResultsJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         lblImg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 102, 204));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
         txtReport.setColumns(20);
@@ -83,7 +89,6 @@ public class ViewTestResultsJPanel extends javax.swing.JPanel {
         spTestReport.setBounds(225, 374, 341, 101);
 
         lblTestReport.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblTestReport.setForeground(new java.awt.Color(255, 255, 255));
         lblTestReport.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblTestReport.setText("Test Report:");
         add(lblTestReport);
@@ -103,7 +108,6 @@ public class ViewTestResultsJPanel extends javax.swing.JPanel {
         txtGender.setBounds(670, 170, 128, 30);
 
         lblName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblName.setForeground(new java.awt.Color(255, 255, 255));
         lblName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblName.setText("Patient Name:");
         lblName.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -111,7 +115,6 @@ public class ViewTestResultsJPanel extends javax.swing.JPanel {
         lblName.setBounds(92, 174, 127, 21);
 
         lblDender.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblDender.setForeground(new java.awt.Color(255, 255, 255));
         lblDender.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblDender.setText("Gender:");
         add(lblDender);
@@ -126,19 +129,16 @@ public class ViewTestResultsJPanel extends javax.swing.JPanel {
         spTestUndergone.setBounds(225, 243, 338, 96);
 
         lblTestUndergone.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblTestUndergone.setForeground(new java.awt.Color(255, 255, 255));
         lblTestUndergone.setText("  Tests Undergone:");
         add(lblTestUndergone);
         lblTestUndergone.setBounds(70, 280, 200, 21);
 
         lblXRAY.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblXRAY.setForeground(new java.awt.Color(255, 255, 255));
         lblXRAY.setText("X-Ray:");
         add(lblXRAY);
         lblXRAY.setBounds(225, 26, 100, 21);
 
         lblCTSCAN.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblCTSCAN.setForeground(new java.awt.Color(255, 255, 255));
         lblCTSCAN.setText("CT-Scan:");
         add(lblCTSCAN);
         lblCTSCAN.setBounds(549, 26, 120, 21);
@@ -160,8 +160,12 @@ public class ViewTestResultsJPanel extends javax.swing.JPanel {
         });
         add(btnBack);
         btnBack.setBounds(20, 17, 72, 36);
+
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/doctor-5.png"))); // NOI18N
+        lblImg.setMaximumSize(new java.awt.Dimension(1680, 1050));
+        lblImg.setPreferredSize(new java.awt.Dimension(1680, 1050));
         add(lblImg);
-        lblImg.setBounds(10, 0, 900, 500);
+        lblImg.setBounds(10, -100, 1680, 1050);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGenderActionPerformed

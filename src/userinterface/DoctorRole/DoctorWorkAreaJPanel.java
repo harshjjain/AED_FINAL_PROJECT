@@ -11,6 +11,9 @@ import Business.UserAccount.UserAccount;
 import Business.WorkQueue.LabTestWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -41,6 +44,12 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         lblUsername.setText(userAccount.getUsername());
         this.system = system;
         populateRequestTable();
+        
+                Icon i = lblImg.getIcon();
+        ImageIcon icon = (ImageIcon)i;
+        Image image = icon.getImage().getScaledInstance(lblImg.getWidth() , lblImg.getHeight(), Image.SCALE_SMOOTH);
+        lblImg.setIcon(new ImageIcon(image));
+        
     }
     
     public void populateRequestTable(){
@@ -91,13 +100,12 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         sptable = new javax.swing.JScrollPane();
         tblRequests = new javax.swing.JTable();
         btnViewTestResults = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        lblImg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 102, 204));
-        setForeground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        btnRequestTest.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnRequestTest.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnRequestTest.setText("Request Test");
         btnRequestTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,9 +113,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnRequestTest);
-        btnRequestTest.setBounds(955, 150, 184, 50);
+        btnRequestTest.setBounds(940, 160, 240, 50);
 
-        btnRefresh.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnRefresh.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,9 +123,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnRefresh);
-        btnRefresh.setBounds(601, 471, 114, 24);
+        btnRefresh.setBounds(780, 430, 130, 40);
 
-        btnViewDetails.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnViewDetails.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnViewDetails.setText("View Details");
         btnViewDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,9 +133,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnViewDetails);
-        btnViewDetails.setBounds(955, 285, 184, 50);
+        btnViewDetails.setBounds(940, 290, 240, 50);
 
-        btnSubmit.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnSubmit.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnSubmit.setText("Submit Medical Report");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,19 +143,17 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnSubmit);
-        btnSubmit.setBounds(955, 218, 184, 50);
+        btnSubmit.setBounds(940, 220, 240, 50);
 
         lblWelcome.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        lblWelcome.setForeground(new java.awt.Color(255, 255, 255));
         lblWelcome.setText("Welcome");
         add(lblWelcome);
-        lblWelcome.setBounds(224, 80, 94, 29);
+        lblWelcome.setBounds(224, 80, 110, 29);
 
         lblUsername.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        lblUsername.setForeground(new java.awt.Color(255, 255, 255));
         lblUsername.setText("username");
         add(lblUsername);
-        lblUsername.setBounds(321, 80, 194, 29);
+        lblUsername.setBounds(320, 80, 194, 29);
 
         tblRequests.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         tblRequests.setModel(new javax.swing.table.DefaultTableModel(
@@ -163,7 +169,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         add(sptable);
         sptable.setBounds(224, 150, 689, 253);
 
-        btnViewTestResults.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnViewTestResults.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnViewTestResults.setText("View Test Results");
         btnViewTestResults.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,9 +177,13 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnViewTestResults);
-        btnViewTestResults.setBounds(955, 353, 190, 50);
-        add(jLabel2);
-        jLabel2.setBounds(190, 10, 1520, 590);
+        btnViewTestResults.setBounds(940, 360, 240, 50);
+
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/medical-work-area.png"))); // NOI18N
+        lblImg.setMaximumSize(new java.awt.Dimension(1680, 1050));
+        add(lblImg);
+        lblImg.setBounds(50, 10, 1680, 1050);
+        lblImg.getAccessibleContext().setAccessibleName("");
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRequestTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestTestActionPerformed
@@ -267,7 +277,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSubmit;
     private javax.swing.JButton btnViewDetails;
     private javax.swing.JButton btnViewTestResults;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblImg;
     private javax.swing.JLabel lblUsername;
     private javax.swing.JLabel lblWelcome;
     private javax.swing.JScrollPane sptable;

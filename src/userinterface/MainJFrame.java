@@ -4,6 +4,7 @@
  */
 package userinterface;
 
+import Buisness.StringVerifier;
 import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
 import Business.Enterprise.Enterprise;
@@ -14,6 +15,7 @@ import java.awt.CardLayout;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.InputVerifier;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -37,7 +39,16 @@ public class MainJFrame extends javax.swing.JFrame {
         ImageIcon icon = (ImageIcon)i;
         Image image = icon.getImage().getScaledInstance(lblBG.getWidth() , lblBG.getHeight(), Image.SCALE_SMOOTH);
         lblBG.setIcon(new ImageIcon(image));
+        addVerifiers();
+    }    
+    private void addVerifiers() 
+    {
+        InputVerifier stringVerifier = new StringVerifier();
+        txtUserName.setInputVerifier(stringVerifier);
+        txtPassword.setInputVerifier(stringVerifier);
     }
+ 
+
 
     /**
      * This method is called from within the constructor to initialize the form.

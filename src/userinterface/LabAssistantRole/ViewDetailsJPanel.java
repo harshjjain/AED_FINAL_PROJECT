@@ -36,9 +36,9 @@ public class ViewDetailsJPanel extends javax.swing.JPanel {
     }
 
     public void populateFields(){
-        txtChildName.setText(request.getChildName());
-        txtSex.setText(request.getSex());
-        txtTests.setText(request.getTests());
+        txtName.setText(request.getChildName());
+        txtGender.setText(request.getSex());
+        txtLabTest.setText(request.getTests());
     }
 
     /**
@@ -50,123 +50,95 @@ public class ViewDetailsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtSex = new javax.swing.JTextField();
-        txtChildName = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtTests = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
-        assignJButton = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        txtGender = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
+        lblName = new javax.swing.JLabel();
+        lblGender = new javax.swing.JLabel();
+        spTestDone = new javax.swing.JScrollPane();
+        txtLabTest = new javax.swing.JTextArea();
+        lblTestsDone = new javax.swing.JLabel();
+        btnAssign = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        lblIMg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(177, 201, 226));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
 
-        txtSex.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtSex.addActionListener(new java.awt.event.ActionListener() {
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSexActionPerformed(evt);
+                txtGenderActionPerformed(evt);
             }
         });
+        add(txtGender);
+        txtGender.setBounds(492, 184, 160, 30);
 
-        txtChildName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtChildName.addActionListener(new java.awt.event.ActionListener() {
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtChildNameActionPerformed(evt);
+                txtNameActionPerformed(evt);
             }
         });
+        add(txtName);
+        txtName.setBounds(492, 134, 160, 30);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel2.setText("Patient Name:");
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lblName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblName.setText("Patient Name:");
+        lblName.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(lblName);
+        lblName.setBounds(281, 137, 144, 20);
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel3.setText("Sex:");
+        lblGender.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblGender.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblGender.setText("Gender:");
+        add(lblGender);
+        lblGender.setBounds(245, 182, 180, 30);
 
-        txtTests.setColumns(20);
-        txtTests.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtTests.setRows(5);
-        jScrollPane1.setViewportView(txtTests);
+        txtLabTest.setColumns(20);
+        txtLabTest.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtLabTest.setRows(5);
+        spTestDone.setViewportView(txtLabTest);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel1.setText("Tests to be Done:");
+        add(spTestDone);
+        spTestDone.setBounds(492, 232, 160, 91);
 
-        assignJButton.setBackground(new java.awt.Color(255, 255, 255));
-        assignJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        assignJButton.setText("Assign to me");
-        assignJButton.addActionListener(new java.awt.event.ActionListener() {
+        lblTestsDone.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblTestsDone.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblTestsDone.setText("Tests to be Done:");
+        add(lblTestsDone);
+        lblTestsDone.setBounds(253, 262, 172, 21);
+
+        btnAssign.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnAssign.setText("Assign to me");
+        btnAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButtonActionPerformed(evt);
+                btnAssignActionPerformed(evt);
             }
         });
+        add(btnAssign);
+        btnAssign.setBounds(410, 370, 151, 42);
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("<<Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnBack.setText("<<<");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
+        add(btnBack);
+        btnBack.setBounds(170, 40, 100, 39);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(221, 221, 221)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addGap(91, 91, 91)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtChildName, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtSex, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(383, 383, 383)
-                        .addComponent(assignJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(210, 401, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtChildName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtSex, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel1)))
-                .addGap(54, 54, 54)
-                .addComponent(assignJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(201, Short.MAX_VALUE))
-        );
+        lblIMg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/doctor-5.png"))); // NOI18N
+        add(lblIMg);
+        lblIMg.setBounds(0, 60, 1160, 600);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtChildNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtChildNameActionPerformed
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtChildNameActionPerformed
+    }//GEN-LAST:event_txtNameActionPerformed
 
-    private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
+    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
         
         if(request.getAssistant() == null){
             request.setAssistant(userAccount);
@@ -177,9 +149,9 @@ public class ViewDetailsJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Tests already Assigned");
 
         }
-    }//GEN-LAST:event_assignJButtonActionPerformed
+    }//GEN-LAST:event_btnAssignActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -189,22 +161,23 @@ public class ViewDetailsJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void txtSexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSexActionPerformed
+    private void txtGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGenderActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtSexActionPerformed
+    }//GEN-LAST:event_txtGenderActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton assignJButton;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtChildName;
-    private javax.swing.JTextField txtSex;
-    private javax.swing.JTextArea txtTests;
+    private javax.swing.JButton btnAssign;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblIMg;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblTestsDone;
+    private javax.swing.JScrollPane spTestDone;
+    private javax.swing.JTextField txtGender;
+    private javax.swing.JTextArea txtLabTest;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }

@@ -81,8 +81,10 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         tblRequest = new javax.swing.JTable();
         lblWelcome = new javax.swing.JLabel();
         lblusername = new javax.swing.JLabel();
+        lblImg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(177, 201, 226));
+        setLayout(null);
 
         btnView.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnView.setText("View Details");
@@ -91,6 +93,8 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
                 btnViewActionPerformed(evt);
             }
         });
+        add(btnView);
+        btnView.setBounds(333, 491, 140, 50);
 
         btnProcess.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnProcess.setText("Process");
@@ -99,6 +103,8 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
                 btnProcessActionPerformed(evt);
             }
         });
+        add(btnProcess);
+        btnProcess.setBounds(738, 491, 140, 50);
 
         btnRefresh.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnRefresh.setText("Refresh");
@@ -107,6 +113,8 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
                 btnRefreshActionPerformed(evt);
             }
         });
+        add(btnRefresh);
+        btnRefresh.setBounds(538, 491, 129, 50);
 
         tblRequest.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         tblRequest.setModel(new javax.swing.table.DefaultTableModel(
@@ -140,51 +148,25 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
             tblRequest.getColumnModel().getColumn(3).setResizable(false);
         }
 
+        add(spWorkTable);
+        spWorkTable.setBounds(292, 152, 617, 305);
+
         lblWelcome.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lblWelcome.setText("Welcome");
+        add(lblWelcome);
+        lblWelcome.setBounds(70, 46, 94, 29);
 
         lblusername.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lblusername.setText("username");
+        add(lblusername);
+        lblusername.setBounds(167, 46, 206, 29);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(lblWelcome)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblusername, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(292, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(65, 65, 65)
-                        .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(71, 71, 71)
-                        .addComponent(btnProcess, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31))
-                    .addComponent(spWorkTable, javax.swing.GroupLayout.PREFERRED_SIZE, 617, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(295, 295, 295))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblWelcome)
-                    .addComponent(lblusername))
-                .addGap(77, 77, 77)
-                .addComponent(spWorkTable, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnProcess, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(116, Short.MAX_VALUE))
-        );
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/lab-work.jpg"))); // NOI18N
+        lblImg.setMaximumSize(new java.awt.Dimension(500, 500));
+        lblImg.setMinimumSize(new java.awt.Dimension(500, 500));
+        lblImg.setPreferredSize(new java.awt.Dimension(500, 500));
+        add(lblImg);
+        lblImg.setBounds(-270, -1210, 2060, 2000);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
@@ -234,6 +216,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnProcess;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnView;
+    private javax.swing.JLabel lblImg;
     private javax.swing.JLabel lblWelcome;
     private javax.swing.JLabel lblusername;
     private javax.swing.JScrollPane spWorkTable;

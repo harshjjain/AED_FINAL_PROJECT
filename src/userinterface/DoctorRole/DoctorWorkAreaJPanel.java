@@ -102,7 +102,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         btnViewTestResults = new javax.swing.JButton();
         lblImg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(0, 204, 204));
         setLayout(null);
 
         btnRequestTest.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N

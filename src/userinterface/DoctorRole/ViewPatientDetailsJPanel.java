@@ -64,7 +64,7 @@ public class ViewPatientDetailsJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         lblImg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 255, 255));
         setLayout(null);
 
         txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -114,13 +114,13 @@ public class ViewPatientDetailsJPanel extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(54, 40, 90, 37);
 
-        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/doctor-5.png"))); // NOI18N
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/doctor-6.png"))); // NOI18N
         lblImg.setToolTipText("");
         lblImg.setMaximumSize(new java.awt.Dimension(1680, 1050));
         lblImg.setMinimumSize(new java.awt.Dimension(1680, 1050));
         lblImg.setPreferredSize(new java.awt.Dimension(1680, 1050));
         add(lblImg);
-        lblImg.setBounds(120, -50, 1680, 1050);
+        lblImg.setBounds(50, -130, 1680, 1050);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

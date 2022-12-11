@@ -8,6 +8,8 @@ import Business.EcoSystem;
 import Business.Network.Network;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -32,7 +34,16 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         this.system = system;
 
         populateNetworkTable();
+       scaleImage();
     }
+   public void scaleImage()
+ {
+        ImageIcon icon=new ImageIcon("C:\\Users\\16084\\Documents\\GitHub\\AED_FINAL_PROJECT\\src\\Image\\Network.JPG");
+        Image img=icon.getImage();
+        Image imgScale=img.getScaledInstance(lblBG.getWidth(), lblBG.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon=new ImageIcon(imgScale);
+        lblBG.setIcon(scaledIcon);
+ }
 
     private void populateNetworkTable() {
         DefaultTableModel model = (DefaultTableModel) networkJTable.getModel();
@@ -60,8 +71,11 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         AddJButton = new javax.swing.JButton();
         nameJTextField = new javax.swing.JTextField();
         backJButton = new javax.swing.JButton();
+        lblBG = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(177, 201, 226));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1400, 950));
+        setLayout(null);
 
         networkJTable.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         networkJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -92,8 +106,13 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
             networkJTable.getColumnModel().getColumn(0).setResizable(false);
         }
 
+        add(jScrollPane1);
+        jScrollPane1.setBounds(315, 123, 500, 150);
+
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setText("Name:");
+        add(jLabel1);
+        jLabel1.setBounds(39, 123, 72, 28);
 
         AddJButton.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         AddJButton.setText("ADD");
@@ -102,8 +121,12 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                 AddJButtonActionPerformed(evt);
             }
         });
+        add(AddJButton);
+        AddJButton.setBounds(39, 231, 142, 42);
 
         nameJTextField.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        add(nameJTextField);
+        nameJTextField.setBounds(39, 169, 142, 32);
 
         backJButton.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         backJButton.setText("<<<");
@@ -112,38 +135,12 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
+        add(backJButton);
+        backJButton.setBounds(39, 27, 72, 37);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backJButton)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AddJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(134, 134, 134)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(AddJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
+        lblBG.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        add(lblBG);
+        lblBG.setBounds(150, 10, 1500, 1000);
     }// </editor-fold>//GEN-END:initComponents
 
     private void AddJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddJButtonActionPerformed
@@ -175,6 +172,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
     private javax.swing.JButton backJButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblBG;
     private javax.swing.JTextField nameJTextField;
     private javax.swing.JTable networkJTable;
     // End of variables declaration//GEN-END:variables

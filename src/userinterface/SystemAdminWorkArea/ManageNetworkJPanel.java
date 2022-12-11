@@ -157,6 +157,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
 
         populateNetworkTable();
         }
+        nameJTextField.setText("");
     }//GEN-LAST:event_AddJButtonActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed

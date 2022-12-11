@@ -40,7 +40,7 @@ public class InvestigatorWorkAreaJPanel extends javax.swing.JPanel {
     }
 
     public void populateTable(){
-        DefaultTableModel model = (DefaultTableModel)workRequestJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel)tblWorkRequest.getModel();
         
         model.setRowCount(0);
         for(WorkRequest request : organization.getWorkQueue().getWorkRequestList()){
@@ -62,18 +62,20 @@ public class InvestigatorWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        btnView = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        spRequestTable = new javax.swing.JScrollPane();
+        tblWorkRequest = new javax.swing.JTable();
+        btnAssign = new javax.swing.JButton();
+        btnUpdateStatus = new javax.swing.JButton();
+        btnViewDetails = new javax.swing.JButton();
+        lblWelcome = new javax.swing.JLabel();
         lblusername = new javax.swing.JLabel();
+        lblImg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(177, 201, 226));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
 
-        workRequestJTable.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblWorkRequest.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tblWorkRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -81,113 +83,82 @@ public class InvestigatorWorkAreaJPanel extends javax.swing.JPanel {
                 "Child Name", "Reporting Official", "Investigator", "Case Status"
             }
         ));
-        jScrollPane1.setViewportView(workRequestJTable);
+        spRequestTable.setViewportView(tblWorkRequest);
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("Assign to me");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        add(spRequestTable);
+        spRequestTable.setBounds(220, 180, 620, 211);
+
+        btnAssign.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnAssign.setText("Assign to me");
+        btnAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAssignActionPerformed(evt);
             }
         });
+        add(btnAssign);
+        btnAssign.setBounds(217, 440, 155, 50);
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setText("Update Status");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdateStatus.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnUpdateStatus.setText("Update Status");
+        btnUpdateStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnUpdateStatusActionPerformed(evt);
             }
         });
+        add(btnUpdateStatus);
+        btnUpdateStatus.setBounds(682, 440, 155, 50);
 
-        btnView.setBackground(new java.awt.Color(255, 255, 255));
-        btnView.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btnView.setText("View Details");
-        btnView.addActionListener(new java.awt.event.ActionListener() {
+        btnViewDetails.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnViewDetails.setText("View Details");
+        btnViewDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
+                btnViewDetailsActionPerformed(evt);
             }
         });
+        add(btnViewDetails);
+        btnViewDetails.setBounds(450, 440, 155, 50);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("Welcome");
+        lblWelcome.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblWelcome.setText("Welcome");
+        add(lblWelcome);
+        lblWelcome.setBounds(49, 77, 94, 29);
 
         lblusername.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lblusername.setText("username");
+        add(lblusername);
+        lblusername.setBounds(146, 77, 201, 29);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblusername, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(217, 217, 217)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 239, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(237, 237, 237)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(248, 248, 248)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(441, 441, 441)
-                        .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(lblusername))
-                .addGap(73, 73, 73)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(106, Short.MAX_VALUE))
-        );
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/investigation -2.jpg"))); // NOI18N
+        add(lblImg);
+        lblImg.setBounds(-1790, 110, 3150, 690);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+    private void btnViewDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDetailsActionPerformed
         // TODO add your handling code here:
-       int selectedRow = workRequestJTable.getSelectedRow();
+       int selectedRow = tblWorkRequest.getSelectedRow();
         
         if (selectedRow < 0){
             return;
         }
         
-        LabTestWorkRequest request = (LabTestWorkRequest)workRequestJTable.getValueAt(selectedRow, 0);
+        LabTestWorkRequest request = (LabTestWorkRequest)tblWorkRequest.getValueAt(selectedRow, 0);
      
         
         InvestigatorChildAreaJPanel processWorkRequestJPanel = new InvestigatorChildAreaJPanel(userProcessContainer, request);
         userProcessContainer.add("InvestigatorChildAreaJPanel", processWorkRequestJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnViewActionPerformed
+    }//GEN-LAST:event_btnViewDetailsActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
         // TODO add your handling code here:
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblWorkRequest.getSelectedRow();
         
         if (selectedRow < 0){
             return;
         }
         
-        LabTestWorkRequest request = (LabTestWorkRequest)workRequestJTable.getValueAt(selectedRow, 0);
+        LabTestWorkRequest request = (LabTestWorkRequest)tblWorkRequest.getValueAt(selectedRow, 0);
         
         if(request.getReceiver() == null){
         
@@ -202,16 +173,16 @@ public class InvestigatorWorkAreaJPanel extends javax.swing.JPanel {
         else{
             JOptionPane.showMessageDialog(null, "Case already Assigned");
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnAssignActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnUpdateStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateStatusActionPerformed
         // TODO add your handling code here:
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblWorkRequest.getSelectedRow();
         if (selectedRow < 0){
             return;
         }
         
-        LabTestWorkRequest request = (LabTestWorkRequest)workRequestJTable.getValueAt(selectedRow, 0);
+        LabTestWorkRequest request = (LabTestWorkRequest)tblWorkRequest.getValueAt(selectedRow, 0);
         if(request.getStatus().equals("Closed")){
             JOptionPane.showMessageDialog(null, "Case already closed");
         }else{
@@ -226,16 +197,17 @@ public class InvestigatorWorkAreaJPanel extends javax.swing.JPanel {
 
         }
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnUpdateStatusActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnView;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton btnAssign;
+    private javax.swing.JButton btnUpdateStatus;
+    private javax.swing.JButton btnViewDetails;
+    private javax.swing.JLabel lblImg;
+    private javax.swing.JLabel lblWelcome;
     private javax.swing.JLabel lblusername;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JScrollPane spRequestTable;
+    private javax.swing.JTable tblWorkRequest;
     // End of variables declaration//GEN-END:variables
 }

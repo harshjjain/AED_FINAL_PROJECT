@@ -94,7 +94,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnView);
-        btnView.setBounds(333, 491, 140, 50);
+        btnView.setBounds(290, 490, 170, 50);
 
         btnProcess.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnProcess.setText("Process");
@@ -104,7 +104,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnProcess);
-        btnProcess.setBounds(738, 491, 140, 50);
+        btnProcess.setBounds(740, 490, 170, 50);
 
         btnRefresh.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnRefresh.setText("Refresh");
@@ -114,7 +114,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnRefresh);
-        btnRefresh.setBounds(538, 491, 129, 50);
+        btnRefresh.setBounds(510, 490, 180, 50);
 
         tblRequest.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         tblRequest.setModel(new javax.swing.table.DefaultTableModel(

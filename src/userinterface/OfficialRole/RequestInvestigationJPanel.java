@@ -50,91 +50,119 @@ public class RequestInvestigationJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        txtchildName = new javax.swing.JTextField();
-        txtEthnicity = new javax.swing.JTextField();
-        txtWhen = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtWhere = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtParentDetails = new javax.swing.JTextArea();
-        btnRequest = new javax.swing.JButton();
+        lblName = new javax.swing.JLabel();
+        lblWhere = new javax.swing.JLabel();
+        lblGender = new javax.swing.JLabel();
+        lblEthnicity = new javax.swing.JLabel();
+        lblDate = new javax.swing.JLabel();
+        lblDesc = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        txtChildEthnicity = new javax.swing.JTextField();
+        txtDate = new javax.swing.JTextField();
+        spWhere = new javax.swing.JScrollPane();
+        txtFoundWhere = new javax.swing.JTextArea();
+        spDetails = new javax.swing.JScrollPane();
+        txtDetails = new javax.swing.JTextArea();
+        btnReq = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        txtDescribe = new javax.swing.JTextArea();
-        jLabel8 = new javax.swing.JLabel();
+        spDesc = new javax.swing.JScrollPane();
+        txtDesc = new javax.swing.JTextArea();
+        lblDetails = new javax.swing.JLabel();
         valueLabel1 = new javax.swing.JLabel();
-        txtSex = new javax.swing.JTextField();
+        txtGender = new javax.swing.JTextField();
+        lblImg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(177, 201, 226));
+        setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setText("Child Name:");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lblName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblName.setText("Child Name:");
+        lblName.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(lblName);
+        lblName.setBounds(40, 100, 160, 30);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel2.setText("Where was the Child found:");
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lblWhere.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblWhere.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblWhere.setText("Where was the Child found:");
+        lblWhere.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(lblWhere);
+        lblWhere.setBounds(120, 270, 270, 30);
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel3.setText("Sex:");
+        lblGender.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblGender.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblGender.setText("Gender:");
+        add(lblGender);
+        lblGender.setBounds(480, 100, 90, 30);
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel4.setText("Ethnicity:");
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lblEthnicity.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblEthnicity.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblEthnicity.setText("Ethnicity:");
+        lblEthnicity.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(lblEthnicity);
+        lblEthnicity.setBounds(770, 100, 110, 30);
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel5.setText("When was the Child found (MM/DD/YYYY):");
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lblDate.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblDate.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblDate.setText("When was the Child found (MM/DD/YYYY):");
+        lblDate.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(lblDate);
+        lblDate.setBounds(-10, 170, 410, 40);
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel6.setText("Describe the Incident:");
-        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lblDesc.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblDesc.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblDesc.setText("Describe the Incident:");
+        lblDesc.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(lblDesc);
+        lblDesc.setBounds(140, 440, 240, 30);
 
-        txtchildName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        add(txtName);
+        txtName.setBounds(210, 100, 250, 30);
 
-        txtEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtEthnicity.addActionListener(new java.awt.event.ActionListener() {
+        txtChildEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtChildEthnicity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEthnicityActionPerformed(evt);
+                txtChildEthnicityActionPerformed(evt);
             }
         });
+        add(txtChildEthnicity);
+        txtChildEthnicity.setBounds(880, 100, 250, 30);
 
-        txtWhen.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtWhen.addActionListener(new java.awt.event.ActionListener() {
+        txtDate.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtWhenActionPerformed(evt);
+                txtDateActionPerformed(evt);
             }
         });
+        add(txtDate);
+        txtDate.setBounds(410, 180, 250, 30);
 
-        txtWhere.setColumns(20);
-        txtWhere.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtWhere.setRows(5);
-        jScrollPane1.setViewportView(txtWhere);
+        txtFoundWhere.setColumns(20);
+        txtFoundWhere.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtFoundWhere.setRows(5);
+        spWhere.setViewportView(txtFoundWhere);
 
-        txtParentDetails.setColumns(20);
-        txtParentDetails.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtParentDetails.setRows(5);
-        jScrollPane2.setViewportView(txtParentDetails);
+        add(spWhere);
+        spWhere.setBounds(410, 240, 250, 115);
 
-        btnRequest.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btnRequest.setText("Request Investigation");
-        btnRequest.addActionListener(new java.awt.event.ActionListener() {
+        txtDetails.setColumns(20);
+        txtDetails.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDetails.setRows(5);
+        spDetails.setViewportView(txtDetails);
+
+        add(spDetails);
+        spDetails.setBounds(410, 530, 250, 115);
+
+        btnReq.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnReq.setText("Request Investigation");
+        btnReq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRequestActionPerformed(evt);
+                btnReqActionPerformed(evt);
             }
         });
+        add(btnReq);
+        btnReq.setBounds(650, 710, 211, 40);
 
         btnBack.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnBack.setText("<<Back");
@@ -143,120 +171,53 @@ public class RequestInvestigationJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack);
+        btnBack.setBounds(34, 29, 77, 33);
 
-        txtDescribe.setColumns(20);
-        txtDescribe.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtDescribe.setRows(5);
-        jScrollPane3.setViewportView(txtDescribe);
+        txtDesc.setColumns(20);
+        txtDesc.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDesc.setRows(5);
+        spDesc.setViewportView(txtDesc);
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel8.setText("Details of Parents / Guardians if Any:");
+        add(spDesc);
+        spDesc.setBounds(410, 390, 250, 115);
+
+        lblDetails.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblDetails.setText("Details of Parents / Guardians if Any:");
+        add(lblDetails);
+        lblDetails.setBounds(90, 560, 300, 40);
 
         valueLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         valueLabel1.setText("<value>");
+        add(valueLabel1);
+        valueLabel1.setBounds(480, 30, 292, 29);
+        add(txtGender);
+        txtGender.setBounds(580, 100, 160, 30);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(btnBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(valueLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(290, 290, 290))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(289, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel8))
-                                .addGap(67, 67, 67))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(60, 60, 60)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                            .addComponent(txtWhen, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                            .addComponent(txtEthnicity, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                            .addComponent(txtchildName, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                            .addComponent(txtSex))
-                        .addGap(241, 241, 241))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(414, 414, 414))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(valueLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtchildName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtSex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEthnicity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtWhen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel6)
-                        .addGap(118, 118, 118)
-                        .addComponent(jLabel8)
-                        .addGap(47, 47, 47)))
-                .addGap(39, 39, 39)
-                .addComponent(btnRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
-        );
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/police_03.jpg"))); // NOI18N
+        lblImg.setMaximumSize(new java.awt.Dimension(800, 800));
+        lblImg.setMinimumSize(new java.awt.Dimension(800, 800));
+        lblImg.setPreferredSize(new java.awt.Dimension(800, 800));
+        add(lblImg);
+        lblImg.setBounds(-1510, -30, 3140, 1930);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtWhenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtWhenActionPerformed
+    private void txtDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtWhenActionPerformed
+    }//GEN-LAST:event_txtDateActionPerformed
 
-    private void txtEthnicityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEthnicityActionPerformed
+    private void txtChildEthnicityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtChildEthnicityActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtEthnicityActionPerformed
+    }//GEN-LAST:event_txtChildEthnicityActionPerformed
 
-    private void btnRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestActionPerformed
+    private void btnReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqActionPerformed
         // TODO add your handling code here:
         try{
-        String[] valid = txtWhen.getText().split("/");
+        String[] valid = txtDate.getText().split("/");
         if(Integer.parseInt(valid[0])==0 || Integer.parseInt(valid[0])>12 || Integer.parseInt(valid[1])==0 ||Integer.parseInt(valid[1])>31 || Integer.parseInt(valid[2])<1000 || Integer.parseInt(valid[2])>2021){
             JOptionPane.showMessageDialog(null, "Incorrect Date format");
         }else{
-        if(txtchildName.getText()==null || txtchildName.getText().isEmpty() || txtEthnicity.getText()==null || txtEthnicity.getText().isEmpty() ||  txtWhen.getText()==null || txtWhen.getText().isEmpty() || txtWhere.getText()==null || txtWhere.getText().isEmpty() ||  txtDescribe.getText()==null || txtDescribe.getText().isEmpty() || txtParentDetails.getText().isEmpty() ||  txtParentDetails.getText()==null)
+        if(txtName.getText()==null || txtName.getText().isEmpty() || txtChildEthnicity.getText()==null || txtChildEthnicity.getText().isEmpty() ||  txtDate.getText()==null || txtDate.getText().isEmpty() || txtFoundWhere.getText()==null || txtFoundWhere.getText().isEmpty() ||  txtDesc.getText()==null || txtDesc.getText().isEmpty() || txtDetails.getText().isEmpty() ||  txtDetails.getText()==null)
         {
             JOptionPane.showMessageDialog(null, "One or more text fields might be empty");
 
@@ -271,13 +232,13 @@ public class RequestInvestigationJPanel extends javax.swing.JPanel {
 
             request.setSender(userAccount);
             request.setStatus("Report  Filed");
-            request.setChildName(txtchildName.getText());
-            request.setSex((String)txtSex.getText());
-            request.setEthnicity(txtEthnicity.getText());
-            request.setWhenFound(txtWhen.getText());
-            request.setWhereFound(txtWhere.getText());
-            request.setDescribe(txtDescribe.getText());
-            request.setParentDetails(txtParentDetails.getText());
+            request.setChildName(txtName.getText());
+            request.setSex((String)txtGender.getText());
+            request.setEthnicity(txtChildEthnicity.getText());
+            request.setWhenFound(txtDate.getText());
+            request.setWhereFound(txtFoundWhere.getText());
+            request.setDescribe(txtDesc.getText());
+            request.setParentDetails(txtDetails.getText());
                     
             JOptionPane.showMessageDialog(null, "Please provide a Photo of the Child");
     int returnVal= image.showOpenDialog(RequestInvestigationJPanel.this);
@@ -306,7 +267,18 @@ public class RequestInvestigationJPanel extends javax.swing.JPanel {
                 }}}}catch(Exception e){
                     JOptionPane.showMessageDialog(null, "Incorrect date format");
                 }
-    }//GEN-LAST:event_btnRequestActionPerformed
+        
+        
+    txtChildEthnicity.setText("");
+    txtDate.setText("");
+    txtDesc.setText("");
+    txtDetails.setText("");
+    txtFoundWhere.setText("");
+    txtGender.setText("");
+    txtName.setText("");
+        
+        
+    }//GEN-LAST:event_btnReqActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -322,24 +294,25 @@ public class RequestInvestigationJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnRequest;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea txtDescribe;
-    private javax.swing.JTextField txtEthnicity;
-    private javax.swing.JTextArea txtParentDetails;
-    private javax.swing.JTextField txtSex;
-    private javax.swing.JTextField txtWhen;
-    private javax.swing.JTextArea txtWhere;
-    private javax.swing.JTextField txtchildName;
+    private javax.swing.JButton btnReq;
+    private javax.swing.JLabel lblDate;
+    private javax.swing.JLabel lblDesc;
+    private javax.swing.JLabel lblDetails;
+    private javax.swing.JLabel lblEthnicity;
+    private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblImg;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblWhere;
+    private javax.swing.JScrollPane spDesc;
+    private javax.swing.JScrollPane spDetails;
+    private javax.swing.JScrollPane spWhere;
+    private javax.swing.JTextField txtChildEthnicity;
+    private javax.swing.JTextField txtDate;
+    private javax.swing.JTextArea txtDesc;
+    private javax.swing.JTextArea txtDetails;
+    private javax.swing.JTextArea txtFoundWhere;
+    private javax.swing.JTextField txtGender;
+    private javax.swing.JTextField txtName;
     private javax.swing.JLabel valueLabel1;
     // End of variables declaration//GEN-END:variables
 }

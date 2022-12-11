@@ -32,16 +32,16 @@ public class ReportSummary extends javax.swing.JPanel {
     }
     
     public void populateFields(){
-        txtInvestigatorName.setText(request.getReceiver()+"");
-        txtReportSummary.setText(request.getReport());
-        txtchildName.setText(request.getChildName());
-        txtSex.setText(request.getSex());
-        txtEthnicity.setText(request.getEthnicity());
+        txtName.setText(request.getReceiver()+"");
+        txtSummaryReport.setText(request.getReport());
+        txtChildName.setText(request.getChildName());
+        txtGender.setText(request.getSex());
+        txtChildEthnicity.setText(request.getEthnicity());
         txtWhen.setText(request.getWhenFound());
-        txtWhere.setText(request.getWhereFound());
-        txtDescribe.setText(request.getDescribe());
+        txtChildWhere.setText(request.getWhereFound());
+        txtDesc.setText(request.getDescribe());
         ImageIcon imageIcon = new ImageIcon(request.getImagePath());
-        lblImage.setIcon(imageIcon);
+        lblImg.setIcon(imageIcon);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -52,133 +52,128 @@ public class ReportSummary extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtReportSummary = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtInvestigatorName = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        lblImage = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtWhere = new javax.swing.JTextArea();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        txtDescribe = new javax.swing.JTextArea();
-        txtchildName = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        txtSex = new javax.swing.JTextField();
-        txtEthnicity = new javax.swing.JTextField();
+        spReportSummarry = new javax.swing.JScrollPane();
+        txtSummaryReport = new javax.swing.JTextArea();
+        lblReportSummary = new javax.swing.JLabel();
+        lblInvestigatorName = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        btnBack = new javax.swing.JButton();
+        lblName = new javax.swing.JLabel();
+        spWhere = new javax.swing.JScrollPane();
+        txtChildWhere = new javax.swing.JTextArea();
+        lblWhen = new javax.swing.JLabel();
+        lblDesc = new javax.swing.JLabel();
+        spDesc = new javax.swing.JScrollPane();
+        txtDesc = new javax.swing.JTextArea();
+        txtChildName = new javax.swing.JTextField();
+        lblWhere = new javax.swing.JLabel();
+        txtGender = new javax.swing.JTextField();
+        txtChildEthnicity = new javax.swing.JTextField();
         txtWhen = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        lblEthnicity = new javax.swing.JLabel();
+        lblGender = new javax.swing.JLabel();
+        lblImg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(177, 201, 226));
         setLayout(null);
 
-        txtReportSummary.setColumns(20);
-        txtReportSummary.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtReportSummary.setRows(5);
-        jScrollPane1.setViewportView(txtReportSummary);
+        txtSummaryReport.setColumns(20);
+        txtSummaryReport.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtSummaryReport.setRows(5);
+        spReportSummarry.setViewportView(txtSummaryReport);
 
-        add(jScrollPane1);
-        jScrollPane1.setBounds(500, 520, 193, 119);
+        add(spReportSummarry);
+        spReportSummarry.setBounds(860, 580, 260, 119);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel1.setText("Report Summary:");
-        add(jLabel1);
-        jLabel1.setBounds(340, 570, 111, 17);
+        lblReportSummary.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblReportSummary.setText("Report Summary:");
+        add(lblReportSummary);
+        lblReportSummary.setBounds(700, 610, 170, 40);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setText("Investigator Name:");
-        add(jLabel2);
-        jLabel2.setBounds(340, 470, 120, 30);
+        lblInvestigatorName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblInvestigatorName.setText("Investigator Name:");
+        add(lblInvestigatorName);
+        lblInvestigatorName.setBounds(690, 530, 180, 30);
 
-        txtInvestigatorName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        add(txtInvestigatorName);
-        txtInvestigatorName.setBounds(500, 470, 193, 27);
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        add(txtName);
+        txtName.setBounds(860, 523, 260, 30);
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("<<Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnBack.setText("<<<");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(jButton1);
-        jButton1.setBounds(39, 35, 90, 37);
+        add(btnBack);
+        btnBack.setBounds(39, 35, 72, 37);
 
-        lblImage.setText(".");
-        add(lblImage);
-        lblImage.setBounds(20, 92, 450, 340);
+        lblName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblName.setText("Child Name:");
+        lblName.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(lblName);
+        lblName.setBounds(30, 120, 170, 30);
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel3.setText("Child Name:");
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        add(jLabel3);
-        jLabel3.setBounds(810, 87, 78, 30);
+        txtChildWhere.setColumns(20);
+        txtChildWhere.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtChildWhere.setRows(5);
+        spWhere.setViewportView(txtChildWhere);
 
-        txtWhere.setColumns(20);
-        txtWhere.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtWhere.setRows(5);
-        jScrollPane2.setViewportView(txtWhere);
+        add(spWhere);
+        spWhere.setBounds(320, 300, 220, 91);
 
-        add(jScrollPane2);
-        jScrollPane2.setBounds(930, 260, 215, 89);
+        lblWhen.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblWhen.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblWhen.setText("When was the Child found:");
+        lblWhen.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(lblWhen);
+        lblWhen.setBounds(50, 210, 250, 40);
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel5.setText("When was the Child found:");
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        add(jLabel5);
-        jLabel5.setBounds(710, 200, 180, 40);
+        lblDesc.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblDesc.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblDesc.setText("Description of the Incident:");
+        lblDesc.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(lblDesc);
+        lblDesc.setBounds(80, 477, 240, 30);
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel6.setText("Description of the Incident:");
-        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        add(jLabel6);
-        jLabel6.setBounds(710, 420, 180, 17);
+        txtDesc.setColumns(20);
+        txtDesc.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDesc.setRows(5);
+        spDesc.setViewportView(txtDesc);
 
-        txtDescribe.setColumns(20);
-        txtDescribe.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtDescribe.setRows(5);
-        jScrollPane3.setViewportView(txtDescribe);
+        add(spDesc);
+        spDesc.setBounds(330, 450, 215, 98);
 
-        add(jScrollPane3);
-        jScrollPane3.setBounds(930, 380, 215, 98);
+        txtChildName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        add(txtChildName);
+        txtChildName.setBounds(210, 120, 215, 30);
 
-        txtchildName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        add(txtchildName);
-        txtchildName.setBounds(930, 90, 215, 27);
+        lblWhere.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblWhere.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblWhere.setText("Where was the Child found:");
+        lblWhere.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(lblWhere);
+        lblWhere.setBounds(60, 320, 250, 40);
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel7.setText("Where was the Child found:");
-        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        add(jLabel7);
-        jLabel7.setBounds(712, 280, 180, 40);
-
-        txtSex.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtSex.addActionListener(new java.awt.event.ActionListener() {
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSexActionPerformed(evt);
+                txtGenderActionPerformed(evt);
             }
         });
-        add(txtSex);
-        txtSex.setBounds(930, 130, 215, 27);
+        add(txtGender);
+        txtGender.setBounds(520, 120, 215, 30);
 
-        txtEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txtEthnicity.addActionListener(new java.awt.event.ActionListener() {
+        txtChildEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtChildEthnicity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEthnicityActionPerformed(evt);
+                txtChildEthnicityActionPerformed(evt);
             }
         });
-        add(txtEthnicity);
-        txtEthnicity.setBounds(930, 170, 215, 27);
+        add(txtChildEthnicity);
+        txtChildEthnicity.setBounds(850, 123, 215, 30);
 
         txtWhen.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtWhen.addActionListener(new java.awt.event.ActionListener() {
@@ -187,20 +182,24 @@ public class ReportSummary extends javax.swing.JPanel {
             }
         });
         add(txtWhen);
-        txtWhen.setBounds(930, 210, 215, 27);
+        txtWhen.setBounds(310, 210, 220, 30);
 
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel9.setText("Ethnicity:");
-        add(jLabel9);
-        jLabel9.setBounds(830, 160, 140, 40);
+        lblEthnicity.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblEthnicity.setText("Ethnicity:");
+        add(lblEthnicity);
+        lblEthnicity.setBounds(760, 120, 100, 30);
 
-        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel10.setText("Sex:");
-        add(jLabel10);
-        jLabel10.setBounds(860, 127, 26, 30);
+        lblGender.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblGender.setText("Gender:");
+        add(lblGender);
+        lblGender.setBounds(440, 120, 90, 30);
+
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/police_03.jpg"))); // NOI18N
+        add(lblImg);
+        lblImg.setBounds(-1470, -10, 5626, 1850);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -210,42 +209,42 @@ public class ReportSummary extends javax.swing.JPanel {
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void txtEthnicityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEthnicityActionPerformed
+    private void txtChildEthnicityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtChildEthnicityActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtEthnicityActionPerformed
+    }//GEN-LAST:event_txtChildEthnicityActionPerformed
 
     private void txtWhenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtWhenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtWhenActionPerformed
 
-    private void txtSexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSexActionPerformed
+    private void txtGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGenderActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtSexActionPerformed
+    }//GEN-LAST:event_txtGenderActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JLabel lblImage;
-    private javax.swing.JTextArea txtDescribe;
-    private javax.swing.JTextField txtEthnicity;
-    private javax.swing.JTextField txtInvestigatorName;
-    private javax.swing.JTextArea txtReportSummary;
-    private javax.swing.JTextField txtSex;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JLabel lblDesc;
+    private javax.swing.JLabel lblEthnicity;
+    private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblImg;
+    private javax.swing.JLabel lblInvestigatorName;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblReportSummary;
+    private javax.swing.JLabel lblWhen;
+    private javax.swing.JLabel lblWhere;
+    private javax.swing.JScrollPane spDesc;
+    private javax.swing.JScrollPane spReportSummarry;
+    private javax.swing.JScrollPane spWhere;
+    private javax.swing.JTextField txtChildEthnicity;
+    private javax.swing.JTextField txtChildName;
+    private javax.swing.JTextArea txtChildWhere;
+    private javax.swing.JTextArea txtDesc;
+    private javax.swing.JTextField txtGender;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextArea txtSummaryReport;
     private javax.swing.JTextField txtWhen;
-    private javax.swing.JTextArea txtWhere;
-    private javax.swing.JTextField txtchildName;
     // End of variables declaration//GEN-END:variables
 }

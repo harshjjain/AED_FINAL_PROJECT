@@ -11,6 +11,9 @@ import Business.UserAccount.UserAccount;
 import Business.WorkQueue.LabTestWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -32,7 +35,13 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.request = request;
         this.organization = organization;
-        populateFields();     
+        populateFields(); 
+        
+        
+        Icon i = lblImg.getIcon();
+        ImageIcon icon = (ImageIcon)i;
+        Image image = icon.getImage().getScaledInstance(lblImg.getWidth() , lblImg.getHeight(), Image.SCALE_SMOOTH);
+        lblImg.setIcon(new ImageIcon(image));
     }
 
 
@@ -66,10 +75,9 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
         lblDoctorRemark = new javax.swing.JLabel();
         btnSubmitReport = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
-        lblimg = new javax.swing.JLabel();
+        lblImg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 102, 204));
-        setForeground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setToolTipText("");
         setLayout(null);
 
@@ -80,7 +88,7 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
             }
         });
         add(txtName);
-        txtName.setBounds(203, 139, 189, 30);
+        txtName.setBounds(200, 160, 189, 30);
 
         txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txtGender.addActionListener(new java.awt.event.ActionListener() {
@@ -89,22 +97,20 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
             }
         });
         add(txtGender);
-        txtGender.setBounds(510, 139, 184, 30);
+        txtGender.setBounds(510, 160, 184, 30);
 
         lblName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblName.setForeground(new java.awt.Color(255, 255, 255));
         lblName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblName.setText("Patient Name:");
         lblName.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(lblName);
-        lblName.setBounds(65, 142, 120, 20);
+        lblName.setBounds(70, 160, 120, 20);
 
         lblGender.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblGender.setForeground(new java.awt.Color(255, 255, 255));
         lblGender.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblGender.setText("Gender:");
         add(lblGender);
-        lblGender.setBounds(410, 137, 82, 30);
+        lblGender.setBounds(410, 160, 82, 30);
 
         txtTests.setColumns(20);
         txtTests.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -115,10 +121,9 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
         spTestUndergone.setBounds(410, 235, 300, 120);
 
         lblTestsUndergone.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblTestsUndergone.setForeground(new java.awt.Color(255, 255, 255));
         lblTestsUndergone.setText("  Tests Undergone:");
         add(lblTestsUndergone);
-        lblTestsUndergone.setBounds(170, 290, 190, 21);
+        lblTestsUndergone.setBounds(210, 300, 190, 21);
 
         txtTestReport.setColumns(20);
         txtTestReport.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -129,10 +134,9 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
         jScrollPane2.setBounds(410, 401, 300, 120);
 
         lblTestReport.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblTestReport.setForeground(new java.awt.Color(255, 255, 255));
         lblTestReport.setText("Test Report:");
         add(lblTestReport);
-        lblTestReport.setBounds(220, 450, 140, 21);
+        lblTestReport.setBounds(250, 450, 140, 21);
 
         txtDoctorRemark.setColumns(20);
         txtDoctorRemark.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -143,10 +147,9 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
         spDoctorRemark.setBounds(410, 557, 300, 120);
 
         lblDoctorRemark.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblDoctorRemark.setForeground(new java.awt.Color(255, 255, 255));
         lblDoctorRemark.setText("Doctor's Remarks:");
         add(lblDoctorRemark);
-        lblDoctorRemark.setBounds(180, 620, 170, 21);
+        lblDoctorRemark.setBounds(220, 600, 170, 21);
 
         btnSubmitReport.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnSubmitReport.setText("Submit Report");
@@ -167,8 +170,13 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
         });
         add(btnBack);
         btnBack.setBounds(47, 44, 72, 39);
-        add(lblimg);
-        lblimg.setBounds(20, 10, 890, 970);
+
+        lblImg.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/medicine.png"))); // NOI18N
+        lblImg.setMaximumSize(new java.awt.Dimension(1680, 1050));
+        lblImg.setPreferredSize(new java.awt.Dimension(1680, 1050));
+        add(lblImg);
+        lblImg.setBounds(-10, -220, 1680, 1050);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGenderActionPerformed
@@ -211,10 +219,10 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblDoctorRemark;
     private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblImg;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblTestReport;
     private javax.swing.JLabel lblTestsUndergone;
-    private javax.swing.JLabel lblimg;
     private javax.swing.JScrollPane spDoctorRemark;
     private javax.swing.JScrollPane spTestUndergone;
     private javax.swing.JTextArea txtDoctorRemark;

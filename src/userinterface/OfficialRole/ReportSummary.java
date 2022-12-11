@@ -97,7 +97,7 @@ public class ReportSummary extends javax.swing.JPanel {
 
         txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         add(txtName);
-        txtName.setBounds(860, 523, 260, 30);
+        txtName.setBounds(860, 530, 260, 30);
 
         btnBack.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnBack.setText("<<<");
@@ -182,7 +182,7 @@ public class ReportSummary extends javax.swing.JPanel {
             }
         });
         add(txtWhen);
-        txtWhen.setBounds(310, 210, 220, 30);
+        txtWhen.setBounds(310, 210, 230, 30);
 
         lblEthnicity.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblEthnicity.setText("Ethnicity:");
@@ -194,9 +194,12 @@ public class ReportSummary extends javax.swing.JPanel {
         add(lblGender);
         lblGender.setBounds(440, 120, 90, 30);
 
-        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/police_03.jpg"))); // NOI18N
+        lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/report-2.jpg"))); // NOI18N
+        lblImg.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        lblImg.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        lblImg.setPreferredSize(new java.awt.Dimension(1000, 1000));
         add(lblImg);
-        lblImg.setBounds(-1470, -10, 5626, 1850);
+        lblImg.setBounds(-580, -50, 2470, 1660);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

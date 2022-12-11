@@ -278,7 +278,7 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         txtGender.setBounds(700, 330, 64, 27);
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/A.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/guardian.jpg"))); // NOI18N
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1000, 730);
     }// </editor-fold>//GEN-END:initComponents
@@ -324,8 +324,21 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         }
             }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Please enter the data correcctly");
-        }
             }
+        }
+        txtChildName.setText("");
+        txtChildGender.setText("");
+        txtEthnicity.setText("");
+        txtFirstName.setText("");
+        txtLastName.setText("");
+        txtAge.setText("");
+        txtGender.setText("");
+        txtProfession.setText("");
+        txtSSN.setText("");
+        txtAnnualIncome.setText("");
+        txtLiabilities.setText("");
+        txtSavings.setText("");
+        txtPartner.setText("");      
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

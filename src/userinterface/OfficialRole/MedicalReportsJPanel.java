@@ -83,7 +83,7 @@ public class MedicalReportsJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        tblMedicalReport.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tblMedicalReport.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tblMedicalReport.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 

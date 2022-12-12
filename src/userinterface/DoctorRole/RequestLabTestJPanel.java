@@ -56,7 +56,6 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
     InputVerifier stringVerifier = new StringVerifier();
     txtName.setInputVerifier(stringVerifier);
     txtGender.setInputVerifier(stringVerifier);
-    txtTestsDone.setInputVerifier(stringVerifier);
     
     
     }
@@ -109,11 +108,11 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(50, 40, 72, 40);
 
-        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtName);
         txtName.setBounds(180, 180, 220, 30);
 
-        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGenderActionPerformed(evt);
@@ -136,7 +135,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         lblGender.setBounds(450, 180, 80, 30);
 
         txtTestsDone.setColumns(20);
-        txtTestsDone.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtTestsDone.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtTestsDone.setRows(5);
         spTest.setViewportView(txtTestsDone);
 

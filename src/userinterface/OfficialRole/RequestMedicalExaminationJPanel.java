@@ -88,13 +88,13 @@ public class RequestMedicalExaminationJPanel extends javax.swing.JPanel {
         add(lblGender);
         lblGender.setBounds(462, 148, 106, 29);
 
-        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtName);
-        txtName.setBounds(212, 152, 226, 23);
+        txtName.setBounds(212, 152, 226, 27);
 
-        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtGender);
-        txtGender.setBounds(586, 152, 226, 23);
+        txtGender.setBounds(586, 152, 226, 27);
 
         lblName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -109,12 +109,12 @@ public class RequestMedicalExaminationJPanel extends javax.swing.JPanel {
         lblMedicalIssues.setBounds(170, 230, 190, 34);
 
         txtMedicalIssue.setColumns(20);
-        txtMedicalIssue.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtMedicalIssue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtMedicalIssue.setRows(5);
         spMedicalIssues.setViewportView(txtMedicalIssue);
 
         add(spMedicalIssues);
-        spMedicalIssues.setBounds(363, 210, 449, 91);
+        spMedicalIssues.setBounds(363, 210, 449, 111);
 
         btnRequest.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnRequest.setText("Request Examination");
@@ -171,7 +171,11 @@ public class RequestMedicalExaminationJPanel extends javax.swing.JPanel {
             org.getWorkQueue().getWorkRequestList().add(request);
             system.getWorkQueue().getWorkRequestList().add(request);
         }
-            JOptionPane.showMessageDialog(null, "Medical Examination Request sent");
+            JOptionPane.showMessageDialog(null, "Medical Examination Requested Successfully");
+            
+ txtName.setText("");
+ txtGender.setText("");
+ txtMedicalIssue.setText("");
 
     }//GEN-LAST:event_btnRequestActionPerformed
 

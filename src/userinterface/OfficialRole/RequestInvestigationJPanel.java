@@ -130,11 +130,11 @@ public class RequestInvestigationJPanel extends javax.swing.JPanel {
         add(lblDesc);
         lblDesc.setBounds(140, 440, 240, 30);
 
-        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtName);
         txtName.setBounds(210, 100, 250, 30);
 
-        txtChildEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtChildEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtChildEthnicity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtChildEthnicityActionPerformed(evt);
@@ -143,7 +143,7 @@ public class RequestInvestigationJPanel extends javax.swing.JPanel {
         add(txtChildEthnicity);
         txtChildEthnicity.setBounds(880, 100, 250, 30);
 
-        txtDate.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDate.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDateActionPerformed(evt);
@@ -153,7 +153,7 @@ public class RequestInvestigationJPanel extends javax.swing.JPanel {
         txtDate.setBounds(410, 180, 250, 30);
 
         txtFoundWhere.setColumns(20);
-        txtFoundWhere.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtFoundWhere.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtFoundWhere.setRows(5);
         spWhere.setViewportView(txtFoundWhere);
 
@@ -161,7 +161,7 @@ public class RequestInvestigationJPanel extends javax.swing.JPanel {
         spWhere.setBounds(410, 240, 250, 115);
 
         txtDetails.setColumns(20);
-        txtDetails.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDetails.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtDetails.setRows(5);
         spDetails.setViewportView(txtDetails);
 
@@ -189,7 +189,7 @@ public class RequestInvestigationJPanel extends javax.swing.JPanel {
         btnBack.setBounds(34, 29, 77, 33);
 
         txtDesc.setColumns(20);
-        txtDesc.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDesc.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtDesc.setRows(5);
         spDesc.setViewportView(txtDesc);
 
@@ -205,6 +205,8 @@ public class RequestInvestigationJPanel extends javax.swing.JPanel {
         valueLabel1.setText("<value>");
         add(valueLabel1);
         valueLabel1.setBounds(480, 30, 292, 29);
+
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtGender);
         txtGender.setBounds(580, 100, 160, 30);
 

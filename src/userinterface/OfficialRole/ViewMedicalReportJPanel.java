@@ -74,7 +74,7 @@ public class ViewMedicalReportJPanel extends javax.swing.JPanel {
         setLayout(null);
 
         txtTestReports.setColumns(20);
-        txtTestReports.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtTestReports.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtTestReports.setRows(5);
         spTestReport.setViewportView(txtTestReports);
 
@@ -87,18 +87,18 @@ public class ViewMedicalReportJPanel extends javax.swing.JPanel {
         lblReport.setBounds(600, 250, 120, 21);
 
         txtDoctorRemark.setColumns(20);
-        txtDoctorRemark.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDoctorRemark.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtDoctorRemark.setRows(5);
         spDoctorRemark.setViewportView(txtDoctorRemark);
 
         add(spDoctorRemark);
         spDoctorRemark.setBounds(280, 220, 300, 101);
 
-        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtName);
         txtName.setBounds(280, 160, 300, 30);
 
-        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGenderActionPerformed(evt);
@@ -126,7 +126,7 @@ public class ViewMedicalReportJPanel extends javax.swing.JPanel {
         lblGender.setBounds(610, 160, 86, 30);
 
         txtTestUndergone.setColumns(20);
-        txtTestUndergone.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtTestUndergone.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtTestUndergone.setRows(5);
         spTestUndergone.setViewportView(txtTestUndergone);
 

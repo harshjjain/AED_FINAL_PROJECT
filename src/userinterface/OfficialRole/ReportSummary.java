@@ -78,7 +78,7 @@ public class ReportSummary extends javax.swing.JPanel {
         setLayout(null);
 
         txtSummaryReport.setColumns(20);
-        txtSummaryReport.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtSummaryReport.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtSummaryReport.setRows(5);
         spReportSummarry.setViewportView(txtSummaryReport);
 
@@ -95,7 +95,7 @@ public class ReportSummary extends javax.swing.JPanel {
         add(lblInvestigatorName);
         lblInvestigatorName.setBounds(690, 530, 180, 30);
 
-        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtName);
         txtName.setBounds(860, 530, 260, 30);
 
@@ -117,12 +117,12 @@ public class ReportSummary extends javax.swing.JPanel {
         lblName.setBounds(30, 120, 170, 30);
 
         txtChildWhere.setColumns(20);
-        txtChildWhere.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtChildWhere.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtChildWhere.setRows(5);
         spWhere.setViewportView(txtChildWhere);
 
         add(spWhere);
-        spWhere.setBounds(320, 300, 220, 91);
+        spWhere.setBounds(320, 300, 220, 111);
 
         lblWhen.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblWhen.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -139,14 +139,14 @@ public class ReportSummary extends javax.swing.JPanel {
         lblDesc.setBounds(80, 477, 240, 30);
 
         txtDesc.setColumns(20);
-        txtDesc.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDesc.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtDesc.setRows(5);
         spDesc.setViewportView(txtDesc);
 
         add(spDesc);
         spDesc.setBounds(330, 450, 215, 98);
 
-        txtChildName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtChildName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtChildName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtChildNameActionPerformed(evt);
@@ -162,7 +162,7 @@ public class ReportSummary extends javax.swing.JPanel {
         add(lblWhere);
         lblWhere.setBounds(60, 320, 250, 40);
 
-        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGenderActionPerformed(evt);
@@ -171,7 +171,7 @@ public class ReportSummary extends javax.swing.JPanel {
         add(txtGender);
         txtGender.setBounds(520, 120, 215, 30);
 
-        txtChildEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtChildEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtChildEthnicity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtChildEthnicityActionPerformed(evt);
@@ -180,7 +180,7 @@ public class ReportSummary extends javax.swing.JPanel {
         add(txtChildEthnicity);
         txtChildEthnicity.setBounds(850, 123, 215, 30);
 
-        txtWhen.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtWhen.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtWhen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtWhenActionPerformed(evt);

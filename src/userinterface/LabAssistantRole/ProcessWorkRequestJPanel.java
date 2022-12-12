@@ -37,14 +37,10 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         this.request = request;
         this.organization = organization;
         image=new JFileChooser();
-        addVerifiers();
+  
     }
     
-    private void addVerifiers(){
-   
-    InputVerifier stringVerifier = new StringVerifier();
-    txtTestReport.setInputVerifier(stringVerifier);
-    }
+
     
 
 
@@ -90,7 +86,7 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         btnBack.setBounds(42, 30, 100, 37);
 
         txtTestReport.setColumns(20);
-        txtTestReport.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtTestReport.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtTestReport.setRows(5);
         jScrollPane1.setViewportView(txtTestReport);
 
@@ -146,7 +142,7 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         else{
         request.setTestReport(txtTestReport.getText()+"\n"+"\n>>Tests done by  "+organization.getEmployeeDirectory().getEmployeeList());
         request.setMedicalStatus("Complete");
-        JOptionPane.showMessageDialog(null, "Test Report sent successfully");
+        JOptionPane.showMessageDialog(null, "Report Submitted successfully");
         }
     }//GEN-LAST:event_btnSubmitActionPerformed
 

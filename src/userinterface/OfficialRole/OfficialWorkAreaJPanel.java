@@ -106,7 +106,7 @@ public class OfficialWorkAreaJPanel extends javax.swing.JPanel {
         add(btnChildReport);
         btnChildReport.setBounds(290, 370, 250, 39);
 
-        tblworkRequest.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tblworkRequest.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tblworkRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -202,7 +202,7 @@ public class OfficialWorkAreaJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnChildReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChildReportActionPerformed
-        // TODO add your handling code here:
+       // TODO add your handling code here:
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("RequestInvestigationJPanel", new RequestInvestigationJPanel(userProcessContainer, userAccount, enterprise));
         layout.next(userProcessContainer);

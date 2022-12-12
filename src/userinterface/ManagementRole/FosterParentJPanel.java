@@ -5,6 +5,8 @@
  */
 package userinterface.ManagementRole;
 
+import Buisness.IntegerVerifier;
+import Buisness.StringVerifier;
 import Business.Enterprise.Enterprise;
 import Business.Organization.LabOrganization;
 import Business.Organization.LegalDepartmentOrganization;
@@ -17,6 +19,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.InputVerifier;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -43,7 +46,27 @@ public class FosterParentJPanel extends javax.swing.JPanel {
         ImageIcon icon = (ImageIcon)i;
         Image image = icon.getImage().getScaledInstance(lblBG.getWidth() , lblBG.getHeight(), Image.SCALE_SMOOTH);
         lblBG.setIcon(new ImageIcon(image));
+        addVerifiers();
     }
+      private void addVerifiers() 
+    {
+        InputVerifier integerVerifier = new IntegerVerifier();
+        InputVerifier stringVerifier = new StringVerifier();
+        txtChildName.setInputVerifier(stringVerifier);
+        txtChildGender.setInputVerifier(stringVerifier);
+        txtEthnicity.setInputVerifier(stringVerifier);
+        txtFirstName.setInputVerifier(stringVerifier);
+        txtLastName.setInputVerifier(stringVerifier);
+        txtAge.setInputVerifier(integerVerifier);
+        txtGender.setInputVerifier(stringVerifier);
+        txtProfession.setInputVerifier(stringVerifier);
+        txtSSN.setInputVerifier(integerVerifier);
+        txtAnnualIncome.setInputVerifier(integerVerifier);
+        txtLiabilities.setInputVerifier(integerVerifier);
+        txtPartner.setInputVerifier(stringVerifier);
+        txtSavings.setInputVerifier(integerVerifier);    
+    }
+    
     
     public void populateFields(){
         txtChildName.setText(request.getChildName());//Child Name is fetched

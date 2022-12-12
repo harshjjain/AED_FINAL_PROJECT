@@ -5,6 +5,8 @@
  */
 package userinterface.ManagementRole;
 
+import Buisness.IntegerVerifier;
+import Buisness.StringVerifier;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -19,6 +21,7 @@ import java.awt.Component;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.InputVerifier;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -53,6 +56,14 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         Image image = icon.getImage().getScaledInstance(lblBG.getWidth() , lblBG.getHeight(), Image.SCALE_SMOOTH);
         lblBG.setIcon(new ImageIcon(image));
     }
+      private void addVerifiers() 
+    {
+        InputVerifier integerVerifier = new IntegerVerifier();
+        InputVerifier stringVerifier = new StringVerifier();
+        txtFirstName.setInputVerifier(stringVerifier);
+        txtLastName.setInputVerifier(stringVerifier);
+        txtDonationAmount.setInputVerifier(integerVerifier);
+    }
 
     public void populateFields(){
         DefaultTableModel model = (DefaultTableModel) tbldonation.getModel();
@@ -75,7 +86,7 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         txtBankBalance = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        lblBankBalance = new javax.swing.JLabel();
         lblFirstName = new javax.swing.JLabel();
         txtFirstName = new javax.swing.JTextField();
         lblLastName = new javax.swing.JLabel();
@@ -85,7 +96,7 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         lblPeronalMessage = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtPersonalMessage = new javax.swing.JTextArea();
-        jLabel6 = new javax.swing.JLabel();
+        lblHighestDonor = new javax.swing.JLabel();
         txtHighestDonor = new javax.swing.JTextField();
         btnConfirm = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -107,11 +118,11 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         add(txtBankBalance);
         txtBankBalance.setBounds(732, 395, 200, 23);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Bank Account Balance:");
-        add(jLabel1);
-        jLabel1.setBounds(506, 395, 200, 21);
+        lblBankBalance.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblBankBalance.setForeground(new java.awt.Color(255, 255, 255));
+        lblBankBalance.setText("Bank Account Balance:");
+        add(lblBankBalance);
+        lblBankBalance.setBounds(506, 395, 200, 21);
 
         lblFirstName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblFirstName.setForeground(new java.awt.Color(255, 255, 255));
@@ -161,11 +172,11 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(240, 231, 234, 91);
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Highest Donor:");
-        add(jLabel6);
-        jLabel6.setBounds(570, 446, 140, 21);
+        lblHighestDonor.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblHighestDonor.setForeground(new java.awt.Color(255, 255, 255));
+        lblHighestDonor.setText("Highest Donor:");
+        add(lblHighestDonor);
+        lblHighestDonor.setBounds(570, 446, 140, 21);
 
         txtHighestDonor.setBackground(new java.awt.Color(221, 221, 221));
         txtHighestDonor.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -204,9 +215,6 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         jScrollPane2.setBounds(538, 93, 423, 229);
 
         lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/donation-1.jpg"))); // NOI18N
-        lblBG.setMaximumSize(new java.awt.Dimension(2000, 1333));
-        lblBG.setMinimumSize(new java.awt.Dimension(2000, 1333));
-        lblBG.setPreferredSize(new java.awt.Dimension(2000, 1333));
         lblBG.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         add(lblBG);
         lblBG.setBounds(0, 0, 2000, 1333);
@@ -258,18 +266,23 @@ Organization org = null;
         }}catch(Exception e){
             JOptionPane.showMessageDialog(null, "Please check your Inputs");
         }
+       
+        txtFirstName.setText("");
+        txtLastName.setText("");
+        txtDonationAmount.setText("");
+        txtPersonalMessage.setText("");
     }//GEN-LAST:event_btnConfirmActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConfirm;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblBG;
+    private javax.swing.JLabel lblBankBalance;
     private javax.swing.JLabel lblDonationAmount;
     private javax.swing.JLabel lblFirstName;
+    private javax.swing.JLabel lblHighestDonor;
     private javax.swing.JLabel lblLastName;
     private javax.swing.JLabel lblPeronalMessage;
     private javax.swing.JTable tbldonation;

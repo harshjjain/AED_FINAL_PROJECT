@@ -124,7 +124,6 @@ public class BankManagerWorkAreaJPanel extends javax.swing.JPanel {
         btnView.setBounds(477, 438, 139, 28);
 
         lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/bank-1.jpg"))); // NOI18N
-        lblBG.setPreferredSize(new java.awt.Dimension(1500, 1000));
         lblBG.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         add(lblBG);
         lblBG.setBounds(0, 0, 1500, 1000);

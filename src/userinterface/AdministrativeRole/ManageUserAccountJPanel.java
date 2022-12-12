@@ -4,6 +4,7 @@
  */
 package userinterface.AdministrativeRole;
 
+import Buisness.StringVerifier;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
@@ -59,6 +60,13 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         for (Role role : organization.getSupportedRole()){
             roleJComboBox.addItem(role);
         }
+    }
+    
+     private void addVerifiers() 
+    {
+        InputVerifier stringVerifier = new StringVerifier();
+        nameJTextField.setInputVerifier(stringVerifier);
+       passwordJTextField.setInputVerifier(stringVerifier);
     }
 
     public void popData() {

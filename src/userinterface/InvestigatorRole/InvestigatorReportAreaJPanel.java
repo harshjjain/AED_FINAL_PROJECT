@@ -77,7 +77,7 @@ public class InvestigatorReportAreaJPanel extends javax.swing.JPanel {
 
         txtReportSummary.setBackground(new java.awt.Color(255, 255, 153));
         txtReportSummary.setColumns(20);
-        txtReportSummary.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtReportSummary.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtReportSummary.setRows(5);
         spReportSummarry.setViewportView(txtReportSummary);
 
@@ -85,19 +85,19 @@ public class InvestigatorReportAreaJPanel extends javax.swing.JPanel {
         spReportSummarry.setBounds(470, 280, 278, 146);
 
         txtChildLastName.setBackground(new java.awt.Color(255, 255, 153));
-        txtChildLastName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtChildLastName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtChildLastName);
-        txtChildLastName.setBounds(470, 240, 278, 23);
+        txtChildLastName.setBounds(470, 240, 278, 27);
 
         txtChildFirstName.setBackground(new java.awt.Color(255, 255, 153));
-        txtChildFirstName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtChildFirstName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtChildFirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtChildFirstNameActionPerformed(evt);
             }
         });
         add(txtChildFirstName);
-        txtChildFirstName.setBounds(470, 200, 278, 23);
+        txtChildFirstName.setBounds(470, 200, 278, 27);
 
         lblFName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblFName.setText("First Name :");
@@ -142,6 +142,7 @@ public class InvestigatorReportAreaJPanel extends javax.swing.JPanel {
         add(btnSaveChoice);
         btnSaveChoice.setBounds(820, 470, 120, 49);
 
+        lblImg.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/investigation-3.jpg"))); // NOI18N
         lblImg.setMaximumSize(new java.awt.Dimension(50, 50));
         lblImg.setMinimumSize(new java.awt.Dimension(50, 50));

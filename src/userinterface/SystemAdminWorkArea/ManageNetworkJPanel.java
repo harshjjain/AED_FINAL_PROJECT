@@ -36,16 +36,9 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         this.system = system;
 
         populateNetworkTable();
-       scaleImage();
+       
     }
-   public void scaleImage()
- {
-        ImageIcon icon=new ImageIcon("C:\\Users\\16084\\Documents\\GitHub\\AED_FINAL_PROJECT\\src\\Image\\Network.JPG");
-        Image img=icon.getImage();
-        Image imgScale=img.getScaledInstance(lblBG.getWidth(), lblBG.getHeight(), Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon=new ImageIcon(imgScale);
-        lblBG.setIcon(scaledIcon);
- }
+  
     private void addVerifiers() 
     {
         InputVerifier stringVerifier = new StringVerifier();

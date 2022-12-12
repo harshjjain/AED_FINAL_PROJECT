@@ -36,16 +36,10 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
         populateTable();
         populateComboBox();
-        scaleImage();
+        addVerifiers() ;
+       
     }
-    public void scaleImage()
- {
-        ImageIcon icon=new ImageIcon("C:\\Users\\16084\\Documents\\GitHub\\AED_FINAL_PROJECT\\src\\Image\\Manage organisation.png");
-        Image img=icon.getImage();
-        Image imgScale=img.getScaledInstance(lblBG.getWidth(), lblBG.getHeight(), Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon=new ImageIcon(imgScale);
-        lblBG.setIcon(scaledIcon);
- }
+   
      private void addVerifiers() 
     {
         InputVerifier stringVerifier = new StringVerifier();
@@ -105,10 +99,10 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         lblBG = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(1064, 946));
+        setPreferredSize(new java.awt.Dimension(1500, 964));
         setLayout(null);
 
-        enterpriseJTable.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        enterpriseJTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -184,9 +178,9 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         add(backJButton);
         backJButton.setBounds(34, 24, 72, 37);
 
-        lblBG.setPreferredSize(new java.awt.Dimension(1500, 964));
+        lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Manage organisation.png"))); // NOI18N
         add(lblBG);
-        lblBG.setBounds(137, 16, 1500, 964);
+        lblBG.setBounds(-30, -160, 1500, 1000);
     }// </editor-fold>//GEN-END:initComponents
 
     private void ADDJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ADDJButtonActionPerformed

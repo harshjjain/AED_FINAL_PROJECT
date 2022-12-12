@@ -366,9 +366,10 @@ public class FosterParentJPanel extends javax.swing.JPanel {
                 break;
             }
         }
-        if (org!=null){
+        if (org!=null)
+        {
             org.getWorkQueue().getWorkRequestList().add(request);
-        JOptionPane.showMessageDialog(null, "Form Submitted successfully");
+            JOptionPane.showMessageDialog(null, "Form Submitted successfully");
         }
             }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Please enter the data correcctly");

@@ -33,16 +33,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         this.userProcessContainer=userProcessContainer;
         this.ecosystem=ecosystem;
         populateTree();        
-        scaleImage();
+        
     }
- public void scaleImage()
- {
-        ImageIcon icon=new ImageIcon("C:\\Users\\16084\\Documents\\GitHub\\AED_FINAL_PROJECT\\src\\Image\\Manage network UI.JPG");
-        Image img=icon.getImage();
-        Image imgScale=img.getScaledInstance(lblBG.getWidth(), lblBG.getHeight(), Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon=new ImageIcon(imgScale);
-        lblBG.setIcon(scaledIcon);
- }
+ 
     
     public void populateTree(){
         DefaultTreeModel model=(DefaultTreeModel)Ecosystem.getModel();
@@ -133,7 +126,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jSplitPane.setLeftComponent(jPanel1);
 
         jPanel2.setBackground(new java.awt.Color(177, 201, 226));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1800, 1440));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1500, 1500));
         jPanel2.setLayout(null);
 
         btnCreateNetwork.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -166,9 +159,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.add(btnCreateAdmin);
         btnCreateAdmin.setBounds(68, 408, 291, 64);
 
-        lblBG.setPreferredSize(new java.awt.Dimension(1800, 1440));
+        lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Network.jpg"))); // NOI18N
         jPanel2.add(lblBG);
-        lblBG.setBounds(0, 0, 1800, 1440);
+        lblBG.setBounds(-50, -330, 1500, 1500);
 
         jSplitPane.setRightComponent(jPanel2);
 

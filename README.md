@@ -33,6 +33,8 @@ Added all the commit history(contribution) in the README file.
 Pushed and merged src UI package -Investigator role(made applicable changes to the 3 panels in the package.)
 
 
+Added Validations;
+
 
 
 

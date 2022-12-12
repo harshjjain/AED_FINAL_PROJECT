@@ -5,6 +5,8 @@
  */
 package userinterface.OfficialRole;
 
+import Buisness.IntegerVerifier;
+import Buisness.StringVerifier;
 import Business.Enterprise.Enterprise;
 import Business.Organization.PoliceDepartmentOrganization;
 import Business.Organization.Organization;
@@ -14,6 +16,7 @@ import Business.WorkQueue.LabTestWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
 import java.io.File;
+import javax.swing.InputVerifier;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -39,6 +42,17 @@ public class RequestInvestigationJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount;
         valueLabel1.setText(enterprise.getName());
         image=new JFileChooser();
+        addVerifiers();
+    }
+    
+    private void addVerifiers(){
+   
+    InputVerifier stringVerifier = new StringVerifier();
+    txtName.setInputVerifier(stringVerifier);
+    txtGender.setInputVerifier(stringVerifier);
+    txtChildEthnicity.setInputVerifier(stringVerifier);
+    
+    
     }
 
     /**

@@ -5,9 +5,11 @@
  */
 package userinterface.InvestigatorRole;
 
+import Buisness.StringVerifier;
 import Business.WorkQueue.LabTestWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import javax.swing.InputVerifier;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -27,7 +29,16 @@ public class InvestigatorReportAreaJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.request = request;
-        }
+        addVerifiers();
+    }
+    
+    private void addVerifiers(){
+   
+    InputVerifier stringVerifier = new StringVerifier();
+    txtChildFirstName.setInputVerifier(stringVerifier);
+    txtChildLastName.setInputVerifier(stringVerifier); 
+    }
+        
 
     /**
      * This method is called from within the constructor to initialize the form.

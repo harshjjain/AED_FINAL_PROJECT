@@ -4,6 +4,7 @@
  */
 package userinterface.DoctorRole;
 
+import Buisness.StringVerifier;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.LabOrganization;
@@ -17,6 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.InputVerifier;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -46,7 +48,19 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         ImageIcon icon = (ImageIcon)i;
         Image image = icon.getImage().getScaledInstance(lblImg.getWidth() , lblImg.getHeight(), Image.SCALE_SMOOTH);
         lblImg.setIcon(new ImageIcon(image));
+        addVerifiers();
     }
+    
+    private void addVerifiers(){
+   
+    InputVerifier stringVerifier = new StringVerifier();
+    txtName.setInputVerifier(stringVerifier);
+    txtGender.setInputVerifier(stringVerifier);
+    txtTestsDone.setInputVerifier(stringVerifier);
+    
+    
+    }
+    
     
     public void populatefields(){
         txtName.setText(request.getChildName());

@@ -76,7 +76,7 @@ public class MainJFrame extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1650, 1050));
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
         btnLogin.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnLogin.setText("Login");
@@ -149,7 +149,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnLogin)
                 .addGap(31, 31, 31)
                 .addComponent(btnLogout)
-                .addContainerGap(613, Short.MAX_VALUE))
+                .addContainerGap(1063, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);
@@ -160,7 +160,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         lblBG.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblBG.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Orphanage.jpg"))); // NOI18N
+        lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/main.png"))); // NOI18N
         lblBG.setPreferredSize(new java.awt.Dimension(1650, 1050));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

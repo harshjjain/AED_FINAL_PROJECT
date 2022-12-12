@@ -48,6 +48,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         InputVerifier stringVerifier = new StringVerifier();
         usernameJTextField.setInputVerifier(stringVerifier);
        passwordJPasswordField.setInputVerifier(stringVerifier);
+       nameJTextField.setInputVerifier(stringVerifier);
     }
 
     private void populateTable() {

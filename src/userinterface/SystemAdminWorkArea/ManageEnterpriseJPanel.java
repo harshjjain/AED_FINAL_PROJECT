@@ -102,7 +102,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1500, 964));
         setLayout(null);
 
-        enterpriseJTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        enterpriseJTable.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 

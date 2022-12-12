@@ -36,6 +36,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         popOrganizationComboBox();
        // employeeJComboBox.removeAllItems();
         popData();
+        addVerifiers();
     }
        
 
@@ -123,21 +124,21 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         add(AddUserJButton);
         AddUserJButton.setBounds(441, 272, 136, 44);
 
-        nameJTextField.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        nameJTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         nameJTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameJTextFieldActionPerformed(evt);
             }
         });
         add(nameJTextField);
-        nameJTextField.setBounds(348, 185, 229, 23);
+        nameJTextField.setBounds(348, 185, 229, 27);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("User Name:");
         add(jLabel1);
         jLabel1.setBounds(160, 185, 100, 21);
 
-        userJTable.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        userJTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         userJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -175,19 +176,19 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(170, 231, 90, 21);
 
-        passwordJTextField.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        passwordJTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(passwordJTextField);
-        passwordJTextField.setBounds(348, 231, 229, 23);
+        passwordJTextField.setBounds(348, 231, 229, 27);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setText("Employee:");
         add(jLabel3);
         jLabel3.setBounds(173, 104, 90, 21);
 
-        employeeJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        employeeJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         employeeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(employeeJComboBox);
-        employeeJComboBox.setBounds(348, 104, 229, 23);
+        employeeJComboBox.setBounds(348, 104, 229, 27);
 
         backjButton1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         backjButton1.setText("<<<");
@@ -204,7 +205,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         add(jLabel5);
         jLabel5.setBounds(156, 63, 120, 21);
 
-        organizationJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        organizationJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,20 +213,19 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
         add(organizationJComboBox);
-        organizationJComboBox.setBounds(348, 63, 229, 23);
+        organizationJComboBox.setBounds(348, 63, 229, 27);
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel4.setText("Role:");
         add(jLabel4);
         jLabel4.setBounds(215, 145, 50, 21);
 
-        roleJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        roleJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(roleJComboBox);
-        roleJComboBox.setBounds(348, 145, 229, 23);
+        roleJComboBox.setBounds(348, 145, 229, 27);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Assign employee.jpg"))); // NOI18N
-        jLabel6.setPreferredSize(new java.awt.Dimension(1500, 1500));
         add(jLabel6);
         jLabel6.setBounds(20, -80, 1500, 1500);
     }// </editor-fold>//GEN-END:initComponents

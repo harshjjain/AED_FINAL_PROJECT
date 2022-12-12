@@ -36,6 +36,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         this.system = system;
 
         populateNetworkTable();
+        addVerifiers() ;
        
     }
   
@@ -78,7 +79,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1400, 950));
         setLayout(null);
 
-        networkJTable.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        networkJTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         networkJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -125,7 +126,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         add(AddJButton);
         AddJButton.setBounds(39, 231, 142, 42);
 
-        nameJTextField.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        nameJTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(nameJTextField);
         nameJTextField.setBounds(39, 169, 142, 32);
 
@@ -139,9 +140,10 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         add(backJButton);
         backJButton.setBounds(39, 27, 72, 37);
 
-        lblBG.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/create Network.jpg"))); // NOI18N
+        lblBG.setPreferredSize(new java.awt.Dimension(1000, 748));
         add(lblBG);
-        lblBG.setBounds(150, 10, 1500, 1000);
+        lblBG.setBounds(150, 10, 1000, 748);
     }// </editor-fold>//GEN-END:initComponents
 
     private void AddJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddJButtonActionPerformed

@@ -160,9 +160,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnCreateAdmin.setBounds(68, 408, 291, 64);
 
         lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Network.jpg"))); // NOI18N
-        lblBG.setPreferredSize(new java.awt.Dimension(1500, 1500));
         jPanel2.add(lblBG);
-        lblBG.setBounds(-140, -340, 1500, 1500);
+        lblBG.setBounds(-50, -330, 1500, 1500);
 
         jSplitPane.setRightComponent(jPanel2);
 

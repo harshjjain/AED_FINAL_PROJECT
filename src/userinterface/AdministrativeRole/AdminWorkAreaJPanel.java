@@ -4,6 +4,9 @@ package userinterface.AdministrativeRole;
 
 import Business.Enterprise.Enterprise;
 import java.awt.CardLayout;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.InputVerifier;
 import javax.swing.JPanel;
 
 /**
@@ -21,6 +24,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         valueLabel.setText(enterprise.getName());
     }
+   
     
     /** This method is called from within the constructor to
      * initialize the form.
@@ -36,14 +40,18 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         CreateOrganizationJButton = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(177, 201, 226));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1000, 1000));
+        setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setText("Administrative Work Area:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, -1, -1));
+        add(jLabel1);
+        jLabel1.setBounds(180, 60, 418, 43);
 
         CreateJButton.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         CreateJButton.setText("Create User");
@@ -52,7 +60,8 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 CreateJButtonActionPerformed(evt);
             }
         });
-        add(CreateJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, 400, 60));
+        add(CreateJButton);
+        CreateJButton.setBounds(180, 460, 400, 60);
 
         CreateEmployeeJButton.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         CreateEmployeeJButton.setText("Create Employee");
@@ -61,7 +70,8 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 CreateEmployeeJButtonActionPerformed(evt);
             }
         });
-        add(CreateEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 400, 60));
+        add(CreateEmployeeJButton);
+        CreateEmployeeJButton.setBounds(180, 340, 400, 60);
 
         CreateOrganizationJButton.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         CreateOrganizationJButton.setText("Create Organization");
@@ -70,17 +80,29 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 CreateOrganizationJButtonActionPerformed(evt);
             }
         });
-        add(CreateOrganizationJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 400, 60));
+        add(CreateOrganizationJButton);
+        CreateOrganizationJButton.setBounds(180, 220, 400, 60);
 
         enterpriseLabel.setBackground(new java.awt.Color(255, 255, 255));
         enterpriseLabel.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         enterpriseLabel.setText("Enterprise :");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 150, 30));
+        add(enterpriseLabel);
+        enterpriseLabel.setBounds(230, 120, 150, 30);
 
         valueLabel.setBackground(new java.awt.Color(255, 255, 255));
         valueLabel.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         valueLabel.setText("(Display_value)");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 260, 30));
+        add(valueLabel);
+        valueLabel.setBounds(370, 120, 260, 30);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Foundation.jpeg"))); // NOI18N
+        add(jLabel2);
+        jLabel2.setBounds(170, 430, 800, 448);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/bank org.jpg"))); // NOI18N
+        jLabel3.setPreferredSize(new java.awt.Dimension(400, 320));
+        add(jLabel3);
+        jLabel3.setBounds(600, 0, 400, 320);
     }// </editor-fold>//GEN-END:initComponents
 
     private void CreateJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateJButtonActionPerformed
@@ -117,6 +139,8 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton CreateOrganizationJButton;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel valueLabel;
     // End of variables declaration//GEN-END:variables
     

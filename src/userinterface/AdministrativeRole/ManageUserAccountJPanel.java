@@ -10,6 +10,7 @@ import Business.Organization.Organization;
 import Business.Role.Role;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import javax.swing.InputVerifier;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -35,6 +36,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
        // employeeJComboBox.removeAllItems();
         popData();
     }
+       
 
     public void popOrganizationComboBox() {
         organizationJComboBox.removeAllItems();

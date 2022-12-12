@@ -116,7 +116,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         add(btnRefresh);
         btnRefresh.setBounds(510, 490, 180, 50);
 
-        tblRequest.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tblRequest.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tblRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -210,6 +210,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         populateTable();
+        JOptionPane.showMessageDialog(null, "Refreshed Successfully");
     }//GEN-LAST:event_btnRefreshActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

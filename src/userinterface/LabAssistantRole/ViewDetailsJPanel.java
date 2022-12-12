@@ -64,7 +64,7 @@ public class ViewDetailsJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGenderActionPerformed(evt);
@@ -73,7 +73,7 @@ public class ViewDetailsJPanel extends javax.swing.JPanel {
         add(txtGender);
         txtGender.setBounds(492, 184, 160, 30);
 
-        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
@@ -96,12 +96,12 @@ public class ViewDetailsJPanel extends javax.swing.JPanel {
         lblGender.setBounds(245, 182, 180, 30);
 
         txtLabTest.setColumns(20);
-        txtLabTest.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtLabTest.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtLabTest.setRows(5);
         spTestDone.setViewportView(txtLabTest);
 
         add(spTestDone);
-        spTestDone.setBounds(492, 232, 160, 91);
+        spTestDone.setBounds(492, 232, 160, 111);
 
         lblTestsDone.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblTestsDone.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -149,6 +149,11 @@ public class ViewDetailsJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Tests already Assigned");
 
         }
+        
+   txtGender.setText("");
+   txtLabTest.setText("");
+   txtName.setText("");
+        
     }//GEN-LAST:event_btnAssignActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

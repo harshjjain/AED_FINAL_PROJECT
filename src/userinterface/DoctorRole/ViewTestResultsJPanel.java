@@ -81,7 +81,7 @@ public class ViewTestResultsJPanel extends javax.swing.JPanel {
         setLayout(null);
 
         txtReport.setColumns(20);
-        txtReport.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtReport.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtReport.setRows(5);
         spTestReport.setViewportView(txtReport);
 
@@ -94,11 +94,11 @@ public class ViewTestResultsJPanel extends javax.swing.JPanel {
         add(lblTestReport);
         lblTestReport.setBounds(67, 399, 152, 46);
 
-        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtName);
         txtName.setBounds(225, 171, 338, 30);
 
-        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGenderActionPerformed(evt);
@@ -121,7 +121,7 @@ public class ViewTestResultsJPanel extends javax.swing.JPanel {
         lblDender.setBounds(581, 169, 80, 30);
 
         txtTestUndergone.setColumns(20);
-        txtTestUndergone.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtTestUndergone.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtTestUndergone.setRows(5);
         spTestUndergone.setViewportView(txtTestUndergone);
 
@@ -161,6 +161,7 @@ public class ViewTestResultsJPanel extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(20, 17, 72, 36);
 
+        lblImg.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/doctor-5.png"))); // NOI18N
         lblImg.setMaximumSize(new java.awt.Dimension(1680, 1050));
         lblImg.setPreferredSize(new java.awt.Dimension(1680, 1050));

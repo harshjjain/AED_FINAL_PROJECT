@@ -180,6 +180,12 @@ public class InvestigatorReportAreaJPanel extends javax.swing.JPanel {
         }
         }
         
+ txtChildFirstName.setText("");
+ txtChildLastName.setText("");
+ txtReportSummary.setText("");
+        
+        
+        
     }//GEN-LAST:event_btnSaveChoiceActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

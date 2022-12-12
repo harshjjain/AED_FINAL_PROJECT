@@ -67,13 +67,13 @@ public class ViewPatientDetailsJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(204, 255, 255));
         setLayout(null);
 
-        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtName);
-        txtName.setBounds(266, 142, 196, 23);
+        txtName.setBounds(266, 142, 196, 27);
 
-        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtGender);
-        txtGender.setBounds(621, 142, 141, 23);
+        txtGender.setBounds(621, 142, 141, 27);
 
         lblName.setBackground(new java.awt.Color(0, 0, 0));
         lblName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -90,7 +90,7 @@ public class ViewPatientDetailsJPanel extends javax.swing.JPanel {
         lblMedicalIssues.setBounds(150, 250, 200, 21);
 
         txtMedicalIssues.setColumns(20);
-        txtMedicalIssues.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtMedicalIssues.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtMedicalIssues.setRows(5);
         spMedicalIssues.setViewportView(txtMedicalIssues);
 

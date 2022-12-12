@@ -81,7 +81,7 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
         setToolTipText("");
         setLayout(null);
 
-        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
@@ -90,7 +90,7 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
         add(txtName);
         txtName.setBounds(200, 160, 189, 30);
 
-        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGenderActionPerformed(evt);
@@ -113,7 +113,7 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
         lblGender.setBounds(410, 160, 82, 30);
 
         txtTests.setColumns(20);
-        txtTests.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtTests.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtTests.setRows(5);
         spTestUndergone.setViewportView(txtTests);
 
@@ -126,7 +126,7 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
         lblTestsUndergone.setBounds(210, 300, 190, 21);
 
         txtTestReport.setColumns(20);
-        txtTestReport.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtTestReport.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtTestReport.setRows(5);
         jScrollPane2.setViewportView(txtTestReport);
 
@@ -139,7 +139,7 @@ public class MedicalReportJPanel extends javax.swing.JPanel {
         lblTestReport.setBounds(250, 450, 140, 21);
 
         txtDoctorRemark.setColumns(20);
-        txtDoctorRemark.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDoctorRemark.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtDoctorRemark.setRows(5);
         spDoctorRemark.setViewportView(txtDoctorRemark);
 

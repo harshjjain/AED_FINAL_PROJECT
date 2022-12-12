@@ -103,7 +103,7 @@ public class InvestigatorChildAreaJPanel extends javax.swing.JPanel {
 
         txtDetails.setBackground(new java.awt.Color(255, 255, 153));
         txtDetails.setColumns(20);
-        txtDetails.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDetails.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtDetails.setRows(5);
         spDetails.setViewportView(txtDetails);
 
@@ -136,7 +136,7 @@ public class InvestigatorChildAreaJPanel extends javax.swing.JPanel {
 
         txtDesc.setBackground(new java.awt.Color(255, 255, 153));
         txtDesc.setColumns(20);
-        txtDesc.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDesc.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtDesc.setRows(5);
         spDesc.setViewportView(txtDesc);
 
@@ -150,39 +150,39 @@ public class InvestigatorChildAreaJPanel extends javax.swing.JPanel {
         lblDetails.setBounds(320, 550, 350, 21);
 
         txtName.setBackground(new java.awt.Color(255, 255, 153));
-        txtName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
             }
         });
         add(txtName);
-        txtName.setBounds(670, 150, 450, 23);
+        txtName.setBounds(670, 150, 450, 27);
 
         txtGender.setBackground(new java.awt.Color(255, 255, 153));
-        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtGender.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtGender);
-        txtGender.setBounds(670, 190, 450, 23);
+        txtGender.setBounds(670, 190, 450, 27);
 
         txtEthnicity.setBackground(new java.awt.Color(255, 255, 153));
-        txtEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtEthnicity.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtEthnicity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEthnicityActionPerformed(evt);
             }
         });
         add(txtEthnicity);
-        txtEthnicity.setBounds(670, 230, 450, 23);
+        txtEthnicity.setBounds(670, 230, 450, 27);
 
         txtWhen.setBackground(new java.awt.Color(255, 255, 153));
-        txtWhen.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtWhen.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtWhen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtWhenActionPerformed(evt);
             }
         });
         add(txtWhen);
-        txtWhen.setBounds(670, 270, 450, 23);
+        txtWhen.setBounds(670, 270, 450, 27);
 
         lblName.setBackground(new java.awt.Color(255, 255, 255));
         lblName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -194,7 +194,7 @@ public class InvestigatorChildAreaJPanel extends javax.swing.JPanel {
 
         txtWhere.setBackground(new java.awt.Color(255, 255, 153));
         txtWhere.setColumns(20);
-        txtWhere.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtWhere.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtWhere.setRows(5);
         spWhere.setViewportView(txtWhere);
 

@@ -155,7 +155,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         add(lblUsername);
         lblUsername.setBounds(320, 80, 194, 29);
 
-        tblRequests.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tblRequests.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         tblRequests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -203,11 +203,13 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
         }
         
+        JOptionPane.showMessageDialog(null, "Request Sent Successfully");
     }//GEN-LAST:event_btnRequestTestActionPerformed
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
 
         populateRequestTable();
+        JOptionPane.showMessageDialog(null, "Table Refreshed!");
         
     }//GEN-LAST:event_btnRefreshActionPerformed
 

@@ -40,16 +40,9 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
         populateTable();
         populateNetworkComboBox();
-        scaleImage();
+        
     }
-     public void scaleImage()
- {
-        ImageIcon icon=new ImageIcon("C:\\Users\\16084\\Documents\\GitHub\\AED_FINAL_PROJECT\\src\\Image\\Manage enterprise admin.png");
-        Image img=icon.getImage();
-        Image imgScale=img.getScaledInstance(lblBG.getWidth(), lblBG.getHeight(), Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon=new ImageIcon(imgScale);
-        lblBG.setIcon(scaledIcon);
- }
+     
      private void addVerifiers() 
     {
         InputVerifier stringVerifier = new StringVerifier();
@@ -118,7 +111,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         lblBG = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(1500, 798));
+        setPreferredSize(new java.awt.Dimension(1000, 798));
         setLayout(null);
 
         enterpriseJTable.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -225,9 +218,10 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(backJButton);
         backJButton.setBounds(41, 34, 72, 37);
 
+        lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Manage enterprise admin.png"))); // NOI18N
         lblBG.setPreferredSize(new java.awt.Dimension(1500, 700));
         add(lblBG);
-        lblBG.setBounds(197, 46, 940, 560);
+        lblBG.setBounds(220, 50, 1500, 700);
     }// </editor-fold>//GEN-END:initComponents
 
     private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed

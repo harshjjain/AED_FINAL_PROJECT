@@ -5,6 +5,7 @@
  */
 package userinterface.OfficialRole;
 
+import Buisness.StringVerifier;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -15,6 +16,7 @@ import Business.UserAccount.UserAccount;
 import Business.WorkQueue.LabTestWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import javax.swing.InputVerifier;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -41,6 +43,14 @@ public class RequestMedicalExaminationJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount;
         this.system = system;
         populatefields();
+        addVerifiers();
+    }
+    
+    private void addVerifiers(){
+   
+    InputVerifier stringVerifier = new StringVerifier();
+    txtName.setInputVerifier(stringVerifier);
+    txtGender.setInputVerifier(stringVerifier);
     }
 
     public void populatefields(){

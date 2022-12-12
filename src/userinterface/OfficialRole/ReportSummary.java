@@ -147,6 +147,11 @@ public class ReportSummary extends javax.swing.JPanel {
         spDesc.setBounds(330, 450, 215, 98);
 
         txtChildName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtChildName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtChildNameActionPerformed(evt);
+            }
+        });
         add(txtChildName);
         txtChildName.setBounds(210, 120, 215, 30);
 
@@ -225,6 +230,10 @@ public class ReportSummary extends javax.swing.JPanel {
     private void txtGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGenderActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtGenderActionPerformed
+
+    private void txtChildNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtChildNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtChildNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

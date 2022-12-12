@@ -4,12 +4,14 @@
  */
 package userinterface.LabAssistantRole;
 
+import Buisness.StringVerifier;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.LabTestWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
 import java.io.File;
+import javax.swing.InputVerifier;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -35,7 +37,15 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         this.request = request;
         this.organization = organization;
         image=new JFileChooser();
+        addVerifiers();
     }
+    
+    private void addVerifiers(){
+   
+    InputVerifier stringVerifier = new StringVerifier();
+    txtTestReport.setInputVerifier(stringVerifier);
+    }
+    
 
 
     /**

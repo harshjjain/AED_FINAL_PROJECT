@@ -4,12 +4,14 @@
  */
 package userinterface.SystemAdminWorkArea;
 
+import Buisness.StringVerifier;
 import Business.EcoSystem;
 import Business.Network.Network;
 import java.awt.CardLayout;
 import java.awt.Component;
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.InputVerifier;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -44,6 +46,12 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         ImageIcon scaledIcon=new ImageIcon(imgScale);
         lblBG.setIcon(scaledIcon);
  }
+    private void addVerifiers() 
+    {
+        InputVerifier stringVerifier = new StringVerifier();
+        nameJTextField.setInputVerifier(stringVerifier);
+       
+    }
 
     private void populateNetworkTable() {
         DefaultTableModel model = (DefaultTableModel) networkJTable.getModel();

@@ -4,6 +4,7 @@
  */
 package userinterface.AdministrativeRole;
 
+import Buisness.StringVerifier;
 import Business.Employee.Employee;
 import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
@@ -40,6 +41,13 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         for (Organization organization : organizationDir.getOrganizationList()){
             organizationJComboBox.addItem(organization);
         }
+    }
+    
+     private void addVerifiers() 
+    {
+        InputVerifier stringVerifier = new StringVerifier();
+        txtname.setInputVerifier(stringVerifier);
+       
     }
     
     public void populateOrganizationEmpComboBox(){
@@ -81,7 +89,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         backJButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        nameJTextField = new javax.swing.JTextField();
+        txtname = new javax.swing.JTextField();
         organizationEmpJComboBox = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -166,9 +174,9 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(23, 154, 60, 21);
 
-        nameJTextField.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        add(nameJTextField);
-        nameJTextField.setBounds(105, 154, 150, 23);
+        txtname.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        add(txtname);
+        txtname.setBounds(105, 154, 150, 23);
 
         organizationEmpJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         organizationEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -186,12 +194,10 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel3.setBounds(270, 149, 110, 30);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/police create org.jpg"))); // NOI18N
-        jLabel4.setPreferredSize(new java.awt.Dimension(568, 612));
         add(jLabel4);
         jLabel4.setBounds(420, 10, 580, 610);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/lawyer-1.jpg"))); // NOI18N
-        jLabel5.setPreferredSize(new java.awt.Dimension(577, 577));
         add(jLabel5);
         jLabel5.setBounds(-110, 400, 510, 570);
     }// </editor-fold>//GEN-END:initComponents
@@ -199,14 +205,14 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
         
         Organization organization = (Organization) organizationEmpJComboBox.getSelectedItem();
-        String name = nameJTextField.getText();
+        String name = txtname.getText();
         if(name==null||name.isEmpty()){
             JOptionPane.showMessageDialog(null, "Text field is empty");
         }else{
         organization.getEmployeeDirectory().createEmployee(name);
         populateTable(organization);
         }
-        nameJTextField.setText("");
+        txtname.setText("");
     }//GEN-LAST:event_addJButtonActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
@@ -236,9 +242,9 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nameJTextField;
     private javax.swing.JComboBox organizationEmpJComboBox;
     private javax.swing.JComboBox organizationJComboBox;
     private javax.swing.JTable organizationJTable;
+    private javax.swing.JTextField txtname;
     // End of variables declaration//GEN-END:variables
 }

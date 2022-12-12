@@ -109,14 +109,14 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         setLayout(null);
 
         txtBankBalance.setBackground(new java.awt.Color(221, 221, 221));
-        txtBankBalance.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtBankBalance.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtBankBalance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBankBalanceActionPerformed(evt);
             }
         });
         add(txtBankBalance);
-        txtBankBalance.setBounds(732, 395, 200, 23);
+        txtBankBalance.setBounds(732, 395, 200, 27);
 
         lblBankBalance.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblBankBalance.setForeground(new java.awt.Color(255, 255, 255));
@@ -131,9 +131,9 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         lblFirstName.setBounds(78, 100, 100, 21);
 
         txtFirstName.setBackground(new java.awt.Color(221, 221, 221));
-        txtFirstName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtFirstName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtFirstName);
-        txtFirstName.setBounds(240, 100, 234, 23);
+        txtFirstName.setBounds(240, 100, 234, 27);
 
         lblLastName.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblLastName.setForeground(new java.awt.Color(255, 255, 255));
@@ -142,9 +142,9 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         lblLastName.setBounds(79, 141, 100, 21);
 
         txtLastName.setBackground(new java.awt.Color(221, 221, 221));
-        txtLastName.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtLastName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtLastName);
-        txtLastName.setBounds(240, 141, 234, 23);
+        txtLastName.setBounds(240, 141, 234, 27);
 
         lblDonationAmount.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblDonationAmount.setForeground(new java.awt.Color(255, 255, 255));
@@ -153,9 +153,9 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         lblDonationAmount.setBounds(21, 182, 160, 21);
 
         txtDonationAmount.setBackground(new java.awt.Color(221, 221, 221));
-        txtDonationAmount.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtDonationAmount.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtDonationAmount);
-        txtDonationAmount.setBounds(240, 182, 234, 23);
+        txtDonationAmount.setBounds(240, 182, 234, 27);
 
         lblPeronalMessage.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblPeronalMessage.setForeground(new java.awt.Color(255, 255, 255));
@@ -165,12 +165,12 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
 
         txtPersonalMessage.setBackground(new java.awt.Color(221, 221, 221));
         txtPersonalMessage.setColumns(20);
-        txtPersonalMessage.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtPersonalMessage.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtPersonalMessage.setRows(5);
         jScrollPane1.setViewportView(txtPersonalMessage);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(240, 231, 234, 91);
+        jScrollPane1.setBounds(240, 231, 294, 111);
 
         lblHighestDonor.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblHighestDonor.setForeground(new java.awt.Color(255, 255, 255));
@@ -179,14 +179,14 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         lblHighestDonor.setBounds(570, 446, 140, 21);
 
         txtHighestDonor.setBackground(new java.awt.Color(221, 221, 221));
-        txtHighestDonor.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtHighestDonor.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtHighestDonor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtHighestDonorActionPerformed(evt);
             }
         });
         add(txtHighestDonor);
-        txtHighestDonor.setBounds(732, 446, 200, 23);
+        txtHighestDonor.setBounds(732, 446, 200, 27);
 
         btnConfirm.setBackground(new java.awt.Color(221, 221, 221));
         btnConfirm.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -200,7 +200,7 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         btnConfirm.setBounds(89, 384, 176, 44);
 
         tbldonation.setBackground(new java.awt.Color(221, 221, 221));
-        tbldonation.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tbldonation.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tbldonation.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -214,6 +214,7 @@ public class ManageDonationsJPanel extends javax.swing.JPanel {
         add(jScrollPane2);
         jScrollPane2.setBounds(538, 93, 423, 229);
 
+        lblBG.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/donation-1.jpg"))); // NOI18N
         lblBG.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         add(lblBG);

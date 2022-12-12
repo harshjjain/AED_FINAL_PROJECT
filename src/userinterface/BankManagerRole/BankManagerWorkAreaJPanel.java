@@ -73,7 +73,7 @@ public class BankManagerWorkAreaJPanel extends javax.swing.JPanel {
         setLayout(null);
 
         tblBank.setBackground(new java.awt.Color(249, 241, 234));
-        tblBank.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tblBank.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tblBank.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 

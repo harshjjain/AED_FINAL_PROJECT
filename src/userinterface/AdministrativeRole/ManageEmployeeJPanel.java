@@ -33,6 +33,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         
         populateOrganizationComboBox();
         populateOrganizationEmpComboBox();
+        addVerifiers();
     }
     
     public void populateOrganizationComboBox(){
@@ -99,7 +100,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         setLayout(null);
 
-        organizationJTable.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        organizationJTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -144,7 +145,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         add(addJButton);
         addJButton.setBounds(401, 191, 150, 40);
 
-        organizationJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        organizationJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,7 +153,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         add(organizationJComboBox);
-        organizationJComboBox.setBounds(137, 455, 150, 23);
+        organizationJComboBox.setBounds(137, 455, 260, 27);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Organization:");
@@ -174,11 +175,11 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(23, 154, 60, 21);
 
-        txtname.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtname.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtname);
-        txtname.setBounds(105, 154, 150, 23);
+        txtname.setBounds(105, 154, 150, 27);
 
-        organizationEmpJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        organizationEmpJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         organizationEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationEmpJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,7 +187,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         add(organizationEmpJComboBox);
-        organizationEmpJComboBox.setBounds(401, 154, 150, 23);
+        organizationEmpJComboBox.setBounds(401, 154, 240, 27);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setText("Organization:");

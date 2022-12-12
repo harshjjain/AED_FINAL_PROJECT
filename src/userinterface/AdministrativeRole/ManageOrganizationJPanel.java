@@ -75,7 +75,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1200, 1200));
         setLayout(null);
 
-        organizationJTable.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        organizationJTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -118,7 +118,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         add(addJButton);
         addJButton.setBounds(690, 210, 180, 35);
 
-        organizationJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        organizationJComboBox.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

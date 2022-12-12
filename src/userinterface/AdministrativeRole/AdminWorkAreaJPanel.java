@@ -51,7 +51,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setText("Administrative Work Area:");
         add(jLabel1);
-        jLabel1.setBounds(180, 60, 418, 43);
+        jLabel1.setBounds(168, 60, 430, 43);
 
         CreateJButton.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         CreateJButton.setText("Create User");
@@ -100,7 +100,6 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel2.setBounds(170, 430, 800, 448);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/bank org.jpg"))); // NOI18N
-        jLabel3.setPreferredSize(new java.awt.Dimension(400, 320));
         add(jLabel3);
         jLabel3.setBounds(600, 0, 400, 320);
     }// </editor-fold>//GEN-END:initComponents

@@ -36,6 +36,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
         populateTable();
         populateComboBox();
+        addVerifiers() ;
        
     }
    
@@ -101,7 +102,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1500, 964));
         setLayout(null);
 
-        enterpriseJTable.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        enterpriseJTable.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -178,7 +179,6 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         backJButton.setBounds(34, 24, 72, 37);
 
         lblBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Manage organisation.png"))); // NOI18N
-        lblBG.setPreferredSize(new java.awt.Dimension(1500, 964));
         add(lblBG);
         lblBG.setBounds(-30, -160, 1500, 1000);
     }// </editor-fold>//GEN-END:initComponents
